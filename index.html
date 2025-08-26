@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Empreender 40+</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
   <style>
     html { scroll-behavior: smooth; }
     body {
@@ -58,6 +62,28 @@
     /* FOOTER */
     footer { background: #000; color: #fff; padding: 40px 0; position: relative; }
     footer a { color: #2BC8EA; font-weight: 600; }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float .bi { line-height: 1; }
   </style>
 </head>
 <body>
@@ -65,10 +91,10 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#inicio">
+      <a class="navbar-brand" href="#inicio" aria-label="Ir para o início">
         <img src="img/logo3.png" alt="Empreender 40+">
       </a>
-      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Alternar navegação">
         ☰
       </button>
       <div class="collapse navbar-collapse" id="menu">
@@ -78,6 +104,10 @@
           <li class="nav-item"><a class="nav-link" href="#palestrantes">Palestrantes</a></li>
           <li class="nav-item"><a class="nav-link" href="#local">Local</a></li>
           <li class="nav-item"><a class="nav-link" href="#inscricao">Inscreva-se</a></li>
+          <!-- YouTube imediatamente à direita do "Inscreva-se" -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank" rel="noopener">YouTube</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#comunidade">Comunidade</a></li>
         </ul>
       </div>
@@ -134,8 +164,7 @@
   <section id="palestrantes" class="container py-5">
     <h2 class="text-center mb-5 fw-bold" style="color:#980BF4;">Palestrantes</h2>
     <div class="row g-4">
-      <!-- Palestrantes: 10 cards -->
-      <div class="col-md-6 col-lg-4" >
+      <div class="col-md-6 col-lg-4">
         <div class="card h-100 position-relative">
           <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80" class="speaker-img" alt="Luciana Prado">
           <div class="speaker-hover">Clique para saber mais</div>
@@ -213,7 +242,10 @@
     <h2 class="fw-bold mb-4" style="color:#0F64F7;">Local do Evento</h2>
     <p>Teatro do Bourbon Country – Porto Alegre</p>
     <div class="container d-flex justify-content-center">
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.752073252158!2d-51.20872418488577!3d-30.027508981859584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979f6b6e7e041%3A0x93126f1e57e1f3d8!2sTeatro%20Bourbon%20Country!5e0!3m2!1spt-BR!2sbr!4v1692969470000!5m2!1spt-BR!2sbr" width="80%" height="450" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.752073252158!2d-51.20872418488577!3d-30.027508981859584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979f6b6e7e041%3A0x93126f1e57e1f3d8!2sTeatro%20Bourbon%20Country!5e0!3m2!1spt-BR!2sbr!4v1692969470000!5m2!1spt-BR!2sbr"
+        width="80%" height="450" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
@@ -223,9 +255,15 @@
       <div class="bg-white p-5 rounded-4 shadow-lg mx-auto" style="max-width:800px;">
         <h2 class="mb-4 fw-bold text-center" style="color:#980BF4;">Faça sua inscrição</h2>
         <form class="row g-3">
-          <div class="col-md-6"><input type="text" class="form-control" placeholder="Nome completo" required></div>
-          <div class="col-md-6"><input type="email" class="form-control" placeholder="E-mail" required></div>
-          <div class="col-md-6"><input type="tel" class="form-control" placeholder="Telefone (opcional)"></div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Nome completo" required>
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="E-mail" required>
+          </div>
+          <div class="col-md-6">
+            <input type="tel" class="form-control" placeholder="Telefone (opcional)">
+          </div>
           <div class="col-md-6">
             <select class="form-select" required>
               <option selected disabled>Selecione seu perfil</option>
@@ -258,11 +296,21 @@
   <footer class="text-center">
     <div class="container">
       <p class="mb-1">Empreender 40+ &copy; 2025</p>
-      <p class="mb-0">Contato: (51) 98144-1554 | <a href="https://www.empreender40mais.com">www.empreender40mais.com</a></p>
+      <p class="mb-0">Contato: (51) 98144-1554 | <a href="https://www.empreender40mais.com" target="_blank" rel="noopener">www.empreender40mais.com</a></p>
     </div>
   </footer>
 
+  <!-- Botão flutuante do WhatsApp -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/5551991086971"
+    target="_blank"
+    rel="noopener"
+    aria-label="Conversar no WhatsApp">
+    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
