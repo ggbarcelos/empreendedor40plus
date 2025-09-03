@@ -18,17 +18,17 @@
       padding: 20px 0; 
       transition: padding 0.3s ease, box-shadow 0.3s ease;
     }
-    .navbar-brand img { max-width: 500px; height: auto; transition: max-width 0.3s ease; } /* Logo maior */
+    .navbar-brand img { max-width: 500px; height: auto; transition: max-width 0.3s ease; }
     .navbar-nav .nav-link { color: #fff !important; font-weight: 600; margin: 0 10px; transition: opacity 0.3s, font-size 0.3s; }
     .navbar-nav .nav-link:hover { opacity: 0.8; }
 
     /* Navbar encolhida */
     .navbar.shrink {
-      padding: 5px 0 !important;
+      padding: 2px 0 !important; /* ficou menor */
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .navbar.shrink .navbar-brand img { max-width: 200px !important; }
-    .navbar.shrink .nav-link { font-size: 0.9rem; }
+    .navbar.shrink .navbar-brand img { max-width: 160px !important; }
+    .navbar.shrink .nav-link { font-size: 0.85rem; }
 
     /* HERO */
     .hero { 
@@ -53,12 +53,11 @@
     .sobre-text h3 { color: #980BF4; font-weight: 800; margin-bottom: 20px; }
     .sobre-text p { font-size: 1.1rem; line-height: 1.7; color: #333; }
 
-    /* YOUTUBE VIDEO RESPONSIVO */
+    /* YOUTUBE VIDEO RESPONSIVO ALTURA DINÂMICA */
     .video-container {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* proporção 16:9 */
-      height: 0;
+      height: 60vh; /* altura responsiva */
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
@@ -74,7 +73,7 @@
     }
 
     /* PALESTRANTES */
-    .card { border: none; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    .card { border: none; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative; overflow: hidden; }
     .card:hover { transform: translateY(-8px); }
     .speaker-img { width: 100%; height: 280px; object-fit: cover; border-radius: 16px 16px 0 0; }
     .card-title { font-weight: 700; }
@@ -173,8 +172,67 @@
   <section id="palestrantes" class="container py-5">
     <h2 class="text-center mb-5 fw-bold" style="color:#980BF4;">Palestrantes</h2>
     <div class="row g-4">
-      <!-- Cards dos palestrantes (igual ao seu código original) -->
-      <!-- ... -->
+      <!-- Exemplo de 6 palestrantes fictícios -->
+      <div class="col-md-4 col-lg-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x400/?person,1" alt="Palestrante 1" class="speaker-img">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ana Silva</h5>
+            <p class="text-muted">Empreendedora Digital</p>
+            <div class="speaker-hover">Especialista em negócios online e marketing digital.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x400/?person,2" alt="Palestrante 2" class="speaker-img">
+          <div class="card-body text-center">
+            <h5 class="card-title">Carlos Mendes</h5>
+            <p class="text-muted">Consultor de Negócios</p>
+            <div class="speaker-hover">Mentor de startups e reinvenção profissional.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x400/?person,3" alt="Palestrante 3" class="speaker-img">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mariana Costa</h5>
+            <p class="text-muted">Especialista em Finanças</p>
+            <div class="speaker-hover">Transformando finanças pessoais em oportunidades de negócio.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x400/?person,4" alt="Palestrante 4" class="speaker-img">
+          <div class="card-body text-center">
+            <h5 class="card-title">Rafael Souza</h5>
+            <p class="text-muted">Inovação e Tecnologia</p>
+            <div class="speaker-hover">Criador de soluções inovadoras para empresas maduras.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x400/?person,5" alt="Palestrante 5" class="speaker-img">
+          <div class="card-body text-center">
+            <h5 class="card-title">Beatriz Lima</h5>
+            <p class="text-muted">Marketing e Branding</p>
+            <div class="speaker-hover">Estratégias de marca para empreendedores 40+.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x400/?person,6" alt="Palestrante 6" class="speaker-img">
+          <div class="card-body text-center">
+            <h5 class="card-title">João Pereira</h5>
+            <p class="text-muted">Empreendedor Serial</p>
+            <div class="speaker-hover">Experiência prática em múltiplos negócios e reinvenção.</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -210,8 +268,18 @@
         navbar.classList.remove('shrink');
       }
     });
+
+    // Ajuste de altura dinâmica do vídeo (altura mínima 300px)
+    function ajustarAlturaVideo() {
+      const video = document.querySelector('.video-container');
+      const altura = window.innerHeight * 0.6;
+      video.style.height = altura > 300 ? altura + 'px' : '300px';
+    }
+    window.addEventListener('resize', ajustarAlturaVideo);
+    window.addEventListener('load', ajustarAlturaVideo);
   </script>
 </body>
 </html>
+
 
 
