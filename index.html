@@ -92,6 +92,136 @@
     .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 999; text-decoration: none; transition: transform 0.3s ease; }
     .whatsapp-float:hover { transform: scale(1.1); }
     .whatsapp-float .bi { line-height: 1; }
+
+    /* Seção de palestrantes */
+.palestrantes-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Container dos cards */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Card individual */
+.palestrante-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.palestrante-card:hover {
+  transform: translateY(-5px);
+}
+
+.palestrante-foto {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Informações do palestrante */
+.palestrante-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.palestrante-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.palestrante-info p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Ícone do LinkedIn fixo na base */
+.linkedin-link {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.linkedin-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.linkedin-link:hover .linkedin-icon {
+  opacity: 0.7;
+}
+ /* LOCAL */
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio (ajuste se quiser outra proporção) */
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px; /* deixa os cantos arredondados */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* sombra suave */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 16px;
+}
+
+
+    /* INSCRIÇÃO */
+    .inscricao-section {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #980BF4, #0F64F7, #2BC8EA);
+      color: #fff;
+      text-align: center;
+    }
+    .inscricao-section h2 {
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .inscricao-section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn-ingresso {
+      background: #fff;
+      color: #0F64F7;
+      font-weight: 700;
+      padding: 14px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-ingresso:hover {
+      background: #f1f1f1;
+      color: #980BF4;
+    }
   </style>
 </head>
 
@@ -166,88 +296,123 @@
   </section>
 
   <!-- Palestrantes (mantendo seus originais) -->
-  <section id="palestrantes" class="container py-5">
-    <h2 class="text-center mb-5 fw-bold" style="color:#980BF4;">Palestrantes</h2>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 position-relative">
-          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80" class="speaker-img" alt="Luciana Prado">
-          <div class="speaker-hover">Clique para saber mais</div>
-          <div class="card-body">
-            <h5 class="card-title">Luciana Prado</h5>
-            <p class="text-muted">Branding para 40+</p>
+  <section id="palestrantes" class="palestrantes-section">
+    <div class="container">
+      <h2 class="section-title">Palestrantes</h2>
+      <div class="cards-wrapper">
+
+        <!-- Card 1 -->
+        <div class="palestrante-card">
+          <img src="img/palestrantes/carmem_ferrao.jpeg" alt="Carmem Ferrão" class="palestrante-foto">
+          <div class="palestrante-info">
+            <h3>Carmem Ferrão</h3>
+            <p>Empresária do varejo, iniciou sua trajetória ainda jovem na Lojas Pompéia. A partir dos 40 anos, assumiu a posição de CEO da rede, liderando processos de expansão e modernização, com reinaugurações emblemáticas de lojas no RS. Tornou-se referência feminina de liderança no setor de moda e varejo.</p>
+            <a href="https://www.linkedin.com/in/carmen-ferr%C3%A3o-83061a29a/?originalSubdomain=br" target="_blank" class="linkedin-link">
+              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
+            </a>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 position-relative">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" class="speaker-img" alt="Roberto Lima">
-          <div class="speaker-hover">Clique para saber mais</div>
-          <div class="card-body">
-            <h5 class="card-title">Roberto Lima</h5>
-            <p class="text-muted">Investindo em Você</p>
+
+        <!-- Card 2 -->
+        <div class="palestrante-card">
+          <img src="img/palestrantes/eduardo_leite2.jpeg" alt="Eduardo Leite" class="palestrante-foto">
+          <div class="palestrante-info">
+            <h3>Eduardo Leite</h3>
+            <p>Advogado e político, destacou-se cedo como prefeito de Pelotas e depois governador do RS. Ao completar 40 anos, tornou-se o primeiro governador reeleito da história do estado e migrou para o PSD, ampliando sua projeção nacional. Conduz hoje um governo marcado pela reconstrução pós-tragédias climáticas e pela pauta da inovação</p>
+            <a href="https://www.linkedin.com/in/eduardo-leite-745635150/?originalSubdomain=br" target="_blank" class="linkedin-link">
+              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
+            </a>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 position-relative">
-          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" class="speaker-img" alt="Sandra Nogueira">
-          <div class="speaker-hover">Clique para saber mais</div>
-          <div class="card-body">
-            <h5 class="card-title">Sandra Nogueira</h5>
-            <p class="text-muted">Liderança Madura</p>
+
+        <!-- Card 3 -->
+        <div class="palestrante-card">
+          <img src="img/palestrantes/pedro_janot.jpeg" alt="Pedro Janot" class="palestrante-foto">
+          <div class="palestrante-info">
+            <h3>Pedro Janot</h3>
+            <p>Executivo com carreira brilhante no varejo e na aviação, foi CEO fundador da Azul Linhas Aéreas. Após os 40 anos, enfrentou um acidente que o deixou tetraplégico e transformou a adversidade em reinvenção pessoal e profissional. Tornou-se palestrante inspirador, autor de livros e mentor de negócios, impactando milhares de pessoas com sua visão de resiliência.</p>
+            <a href="https://www.linkedin.com/in/pedrojanot/?originalSubdomain=br" target="_blank" class="linkedin-link">
+              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
+            </a>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 position-relative">
-          <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=800&q=80" class="speaker-img" alt="Fernando Reis">
-          <div class="speaker-hover">Clique para saber mais</div>
-          <div class="card-body">
-            <h5 class="card-title">Fernando Reis</h5>
-            <p class="text-muted">Networking que Funciona</p>
+
+        <!-- Card 4 -->
+        <div class="palestrante-card">
+          <img src="img/palestrantes/andre_foresti.jpeg" alt="André Foresti" class="palestrante-foto">
+          <div class="palestrante-info">
+            <h3>André Foresti</h3>
+            <p>Publicitário e estrategista de marcas, com trajetória em grandes agências. Ao ultrapassar os 40 anos, fundou o hub Unplanned e a consultoria TroubleMakers, reposicionando sua carreira para provocar transformação cultural em empresas. Hoje é referência em inovação, criatividade e liderança disruptiva.</p>
+            <a href="https://www.linkedin.com/in/andr%C3%A9-foresti-28a323a/?originalSubdomain=br" target="_blank" class="linkedin-link">
+              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
+            </a>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 position-relative">
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" class="speaker-img" alt="Patrícia Alves">
-          <div class="speaker-hover">Clique para saber mais</div>
-          <div class="card-body">
-            <h5 class="card-title">Patrícia Alves</h5>
-            <p class="text-muted">Empreender com Saúde</p>
+
+        <!-- Card 5 -->
+        <div class="palestrante-card">
+          <img src="img/palestrantes/fatima_torri.jpeg" alt="Fática Torri" class="palestrante-foto">
+          <div class="palestrante-info">
+            <h3>Fátima Torri</h3>
+            <p>Jornalista e empresária, fundadora da FTcom, referência em comunicação corporativa. Depois dos 40, criou a plataforma Fala Feminina, que dá voz às mulheres em espaços de liderança e promove debates sobre diversidade e inclusão. Consolidou-se como empreendedora madura, com mais de duas décadas de impacto no mercado.</p>
+            <a href="https://www.linkedin.com/in/fatima-torri/?originalSubdomain=br" target="_blank" class="linkedin-link">
+              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
+            </a>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 position-relative">
-          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" class="speaker-img" alt="Marcelo Torres">
-          <div class="speaker-hover">Clique para saber mais</div>
-          <div class="card-body">
-            <h5 class="card-title">Marcelo Torres</h5>
-            <p class="text-muted">Tecnologia para Todos</p>
+
+        <!-- Card 6 -->
+        <div class="palestrante-card">
+          <img src="img/palestrantes/cris_paz.jpeg" alt="Cris Páz" class="palestrante-foto">
+          <div class="palestrante-info">
+            <h3>Cris Páz</h3>
+            <p>Escritora, publicitária e criadora de conteúdo, pioneira com o blog “Hoje Vou Assim”. Após os 40 anos, mudou sua assinatura para Cris Pàz e passou a se dedicar fortemente a palestras, livros, podcasts e colunas que abordam longevidade, saúde mental e etarismo. É uma das vozes mais influentes sobre envelhecimento ativo e reinvenção pessoal no Brasil.</p>
+            <a href="https://www.linkedin.com/in/eucrispaz/?originalSubdomain=br" target="_blank" class="linkedin-link">
+              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
+            </a>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 position-relative">
-          <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=800&q=80" class="speaker-img" alt="Renata Campos">
-          <div class="speaker-hover">Clique para saber mais</div>
-          <div class="card-body">
-            <h5 class="card-title">Renata Campos</h5>
-            <p class="text-muted">Recomeçar é Poderoso</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Comunidade -->
-  <section id="comunidade" class="py-5 container text-center">
-    <h2 class="fw-bold mb-4" style="color:#980BF4;">Comunidade Empreender 40+</h2>
-    <p class="lead">Após o evento, você poderá fazer parte da nossa comunidade exclusiva, com grupos de networking, mentorias coletivas e conteúdos especiais.<br><br>Uma rede de apoio para que o aprendizado e as conexões continuem muito além do palco.</p>
-    <a href="#" class="btn btn-primary mt-3">Quero fazer parte</a>
+  <!-- Local -->
+  <section id="local" class="local-section">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="color:#980BF4;">Local do Evento</h2>
+      <p class="lead mb-4">📍 Teatro Bourbon Country - Porto Alegre, RS</p>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6909.045370188859!2d-51.16532032379369!3d-30.021859130230595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977992d5686a9%3A0xb537dcabdd5b0bc2!2sTeatro%20do%20Bourbon%20Country!5e0!3m2!1spt-BR!2sbr!4v1756925244227!5m2!1spt-BR!2sbr" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
   </section>
+
+  <!-- Inscrição -->
+  <section id="inscricao" class="inscricao-section">
+    <div class="container">
+      <h2>Garanta Seu Ingresso</h2>
+      <p>Não perca a chance de participar do maior evento de empreendedorismo 40+ do Brasil.</p>
+      <a href="https://uhuu.com" target="_blank" rel="noopener" class="btn-ingresso">Comprar Ingresso na Uhuu</a>
+    </div>
+  </section>
+
+  <!-- Comunidade -->
+<section id="comunidade" class="py-5 container text-center">
+  <h2 class="fw-bold mb-4" style="color:#980BF4;">Comunidade Empreender 40+</h2>
+  <p class="lead">
+    O nosso evento não termina no palco. ✨<br> 
+    Você poderá fazer parte de uma <strong>comunidade exclusiva</strong>, com grupos de networking, mentorias coletivas e conteúdos especiais.<br><br>
+    Uma rede de apoio para que o aprendizado e as conexões continuem muito além do evento.
+  </p>
+  <a href="#" class="btn btn-primary mt-3">Quero fazer parte</a>
+</section>
+
 
   <!-- Rodapé -->
   <footer class="text-center">
