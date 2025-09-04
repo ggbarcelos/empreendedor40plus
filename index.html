@@ -71,9 +71,19 @@
   }
   
   .navbar-toggler {
-    font-size: 1.5rem;
-    padding: 8px 12px;
     border: 2px solid #fff;
+    padding: 4px 8px;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  .navbar-collapse {
+    background: rgba(152, 11, 244, 0.95);
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 15px;
   }
 }
 
@@ -277,7 +287,9 @@
       <a class="navbar-brand" href="#inicio" aria-label="Ir para o início"> 
         <img src="img/logo3.png" alt="Empreender 40+">
       </a>
-      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Alternar navegação"> ☰ </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
