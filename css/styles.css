@@ -1,0 +1,267 @@
+html { scroll-behavior: smooth; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff; color: #333; }
+
+/* NAVBAR */
+.navbar { 
+  background: linear-gradient(90deg, #980BF4, #0F64F7, #2BC8EA); 
+  height: 280px;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+  height: 240px;
+  transition: height 0.3s ease;
+  transform-origin: center;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+/* Navbar encolhida */
+.navbar.shrink {
+  height: 70px;
+  padding: 8px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.navbar.shrink .navbar-brand img {
+  height: 120px;
+}
+
+.navbar.shrink .nav-link {
+  transform: scale(0.9);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    height: 120px;
+    padding: 10px 15px;
+  }
+  
+  .navbar-brand img {
+    height: 100px;
+  }
+  
+  .navbar.shrink {
+    height: 60px;
+    padding: 5px 15px;
+  }
+  
+  .navbar.shrink .navbar-brand img {
+    height: 50px;
+  }
+  
+  .navbar-toggler {
+    border: 2px solid #fff;
+    padding: 4px 8px;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  .navbar-collapse {
+    background: rgba(152, 11, 244, 0.95);
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 15px;
+  }
+}
+
+/* HERO - Apenas imagem responsiva */
+/* HERO - ocupa largura total, mantém proporção e resolução */
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;      /* ocupa sempre toda a largura */
+  height: auto;     /* mantém proporção */
+  display: block;
+  object-fit: cover; /* cobre a largura sem distorcer */
+  max-width: 100%;   /* nunca ultrapassa a largura da tela */
+}
+
+/* SOBRE */
+.sobre-card { border-radius: 16px; padding: 30px; transition: transform 0.3s ease; }
+.sobre-card:hover { transform: translateY(-8px); }
+.sobre-text { margin-top: 40px; padding: 30px; border-radius: 16px; background: linear-gradient(90deg, rgba(152,11,244,0.1), rgba(15,100,247,0.1)); box-shadow: 0 6px 20px rgba(0,0,0,0.05); text-align: center; }
+.sobre-text h3 { color: #980BF4; font-weight: 800; margin-bottom: 20px; }
+.sobre-text p { font-size: 1.1rem; line-height: 1.7; color: #333; }
+
+/* YOUTUBE VIDEO RESPONSIVO */
+.video-container {
+  width: 100%;
+  height: 60vh;
+  min-height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  margin-top: 50px;
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* PALESTRANTES */
+.card { border: none; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+.card:hover { transform: translateY(-8px); }
+.speaker-img { width: 100%; height: 280px; object-fit: cover; border-radius: 16px 16px 0 0; }
+.card-title { font-weight: 700; }
+.text-muted { color: #0F64F7 !important; font-weight: 600; }
+.speaker-hover { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; padding: 10px; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.7)); color: white; opacity: 0; transition: 0.3s; border-radius: 0 0 16px 16px; }
+.card:hover .speaker-hover { opacity: 1; }
+
+/* FORM */
+.form-control, .form-select { border-radius: 10px; padding: 14px 16px; border: 1px solid #ddd; }
+.form-control:focus, .form-select:focus { border-color: #980BF4; box-shadow: 0 0 10px rgba(152,11,244,0.3); }
+.btn-primary { background: linear-gradient(90deg, #980BF4, #0F64F7, #2BC8EA); border: none; padding: 14px 40px; border-radius: 10px; transition: opacity 0.3s ease; }
+.btn-primary:hover { opacity: 0.9; }
+
+/* FOOTER */
+footer { background: #000; color: #fff; padding: 40px 0; position: relative; }
+footer a { color: #2BC8EA; font-weight: 600; }
+
+/* WHATSAPP FLOAT */
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 999; text-decoration: none; transition: transform 0.3s ease; }
+.whatsapp-float:hover { transform: scale(1.1); }
+.whatsapp-float .bi { line-height: 1; }
+
+/* Seção de palestrantes */
+.palestrantes-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.palestrante-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.palestrante-card:hover {
+  transform: translateY(-5px);
+}
+
+.palestrante-foto {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.palestrante-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.palestrante-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.palestrante-info p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.linkedin-link {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.linkedin-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.linkedin-link:hover .linkedin-icon {
+  opacity: 0.7;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 16px;
+}
+
+.inscricao-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #980BF4, #0F64F7, #2BC8EA);
+  color: #fff;
+  text-align: center;
+}
+
+.inscricao-section h2 {
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.inscricao-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-ingresso {
+  background: #fff;
+  color: #0F64F7;
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-ingresso:hover {
+  background: #f1f1f1;
+  color: #980BF4;
+}
