@@ -2548,16 +2548,17 @@ body.navbar-shrunk {
   position: absolute;
   background: white;
   border-radius: 20px;
-  padding: 25px;
+  padding: 20px 25px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
   transition: all 0.3s ease;
   animation: cardFloat 6s infinite ease-in-out;
   z-index: 5;
-  max-width: 280px;
-  min-width: 260px;
+  max-width: 240px;
+  min-width: 220px;
+  width: auto;
 }
 
 .visual-card:hover {
@@ -2605,21 +2606,29 @@ body.navbar-shrunk {
   flex-shrink: 0;
 }
 
+.card-content {
+  flex: 1;
+  min-width: 0;
+}
+
 .card-content h4 {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 800;
   color: #1a202c;
-  margin: 0;
+  margin: 0 0 5px 0;
   line-height: 1.2;
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .card-content p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #64748b;
   margin: 0;
   line-height: 1.4;
   white-space: normal;
+  word-wrap: break-word;
+  font-weight: 500;
 }
 
 /* Logo Central com Pulse */
