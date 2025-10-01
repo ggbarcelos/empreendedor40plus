@@ -3704,4 +3704,261 @@ body.navbar-shrunk {
   .feature-item-community {
     padding: 15px;
   }
+
+}
+
+/* ====================================
+   FOOTER MODERNO - VERSÃO ATUALIZADA
+   ==================================== */
+
+.footer-modern {
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+  color: #e2e8f0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.footer-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #980BF4, #0F64F7, #2BC8EA);
+}
+
+/* Logo do Footer */
+.footer-modern .footer-logo {
+  height: 70px;
+  filter: brightness(1.2);
+  transition: transform 0.3s ease;
+}
+
+.footer-modern .footer-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Descrição */
+.footer-modern .footer-description {
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  max-width: 350px;
+}
+
+/* Redes Sociais */
+.footer-modern .footer-social {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-modern .footer-social a {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(152, 11, 244, 0.2), rgba(15, 100, 247, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e8f0;
+  font-size: 1.3rem;
+  text-decoration: none;
+  border: 1px solid rgba(152, 11, 244, 0.3);
+  transition: all 0.3s ease;
+}
+
+.footer-modern .footer-social a:hover {
+  background: linear-gradient(135deg, #980BF4, #0F64F7);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(152, 11, 244, 0.4);
+}
+
+/* Títulos das Colunas */
+.footer-modern .footer-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-modern .footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #980BF4, #0F64F7);
+  border-radius: 2px;
+}
+
+/* Links do Footer */
+.footer-modern .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-modern .footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-modern .footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-modern .footer-links a::before {
+  content: '›';
+  color: #980BF4;
+  font-weight: bold;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.footer-modern .footer-links a:hover {
+  color: #2BC8EA;
+  transform: translateX(5px);
+}
+
+.footer-modern .footer-links a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Informações de Contato */
+.footer-modern .footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-modern .footer-contact li {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-modern .footer-contact i {
+  font-size: 1.2rem;
+  color: #980BF4;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-modern .footer-contact a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-modern .footer-contact a:hover {
+  color: #2BC8EA;
+}
+
+/* Separador */
+.footer-modern .footer-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(152, 11, 244, 0.3) 20%,
+    rgba(15, 100, 247, 0.3) 50%,
+    rgba(43, 200, 234, 0.3) 80%,
+    transparent 100%
+  );
+  border: none;
+  margin: 0;
+  opacity: 0.5;
+}
+
+/* Copyright */
+.footer-modern .footer-copyright {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-modern .footer-copyright strong {
+  color: #e2e8f0;
+  font-weight: 700;
+  background: linear-gradient(90deg, #980BF4, #0F64F7, #2BC8EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-modern .footer-credits {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-modern .footer-credits i {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(1.2);
+  }
+  20%, 40% {
+    transform: scale(1);
+  }
+}
+
+/* Responsividade do Footer */
+@media (max-width: 992px) {
+  .footer-modern {
+    margin-top: 60px;
+  }
+  
+  .footer-modern .footer-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-modern {
+    margin-top: 40px;
+  }
+  
+  .footer-modern .footer-logo {
+    height: 60px;
+  }
+  
+  .footer-modern .footer-title {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .footer-modern .footer-social {
+    justify-content: flex-start;
+  }
+  
+  .footer-modern .footer-copyright,
+  .footer-modern .footer-credits {
+    font-size: 0.85rem;
+  }
 }
