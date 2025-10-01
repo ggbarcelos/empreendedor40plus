@@ -179,26 +179,48 @@ body.navbar-shrunk {
 }
 
 .title-highlight {
-  display: block;
+  display: inline-block;
   font-size: 6rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #FFD700, #FFA500);
+  background: linear-gradient(135deg, #FF00FF, #00D4FF, #00FFF0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 15px 0;
   position: relative;
+  animation: gradientShift 3s ease infinite;
+  filter: drop-shadow(0 0 25px rgba(255, 0, 255, 1)) 
+          drop-shadow(0 0 50px rgba(0, 212, 255, 0.8))
+          drop-shadow(0 0 75px rgba(0, 255, 240, 0.6));
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
 }
 
 .title-highlight::after {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #FFD700, #FFA500);
-  border-radius: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 8px;
+  background: linear-gradient(90deg, #FF00FF, #00D4FF, #00FFF0);
+  border-radius: 4px;
+  animation: gradientShift 3s ease infinite;
+  box-shadow: 0 0 25px rgba(255, 0, 255, 1),
+              0 0 50px rgba(0, 212, 255, 0.8),
+              0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(10deg);
+  }
 }
 
 .title-subtitle {
@@ -270,15 +292,15 @@ body.navbar-shrunk {
 }
 
 .btn-primary-hero {
-  background: linear-gradient(135deg, #FFD700, #FFA500);
-  color: #000;
+  background: linear-gradient(135deg, #980BF4, #0F64F7);
+  color: #fff;
   padding: 18px 35px;
   border-radius: 50px;
   font-weight: 700;
   font-size: 1.1rem;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(152, 11, 244, 0.4);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -336,25 +358,63 @@ body.navbar-shrunk {
 
 .stat-item {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 20px 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 40, 0.8));
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  border: 3px solid rgba(255, 0, 255, 0.5);
   flex: 1;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6),
+              0 0 40px rgba(255, 0, 255, 0.3) inset;
+}
+
+.stat-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  border-color: rgba(0, 212, 255, 0.8);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8),
+              0 0 60px rgba(0, 212, 255, 0.5) inset,
+              0 0 80px rgba(255, 0, 255, 0.4);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(30, 10, 50, 0.9));
 }
 
 .stat-number {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 900;
-  color: #FFD700;
+  background: linear-gradient(135deg, #FF00FF, #00D4FF, #00FFF0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
+  filter: drop-shadow(0 0 20px rgba(255, 0, 255, 1)) 
+          drop-shadow(0 0 40px rgba(0, 212, 255, 0.8))
+          drop-shadow(0 0 60px rgba(0, 255, 240, 0.6));
+  animation: pulseGlow 2s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(255, 0, 255, 1)) 
+            drop-shadow(0 0 40px rgba(0, 212, 255, 0.8))
+            drop-shadow(0 0 60px rgba(0, 255, 240, 0.6));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(255, 0, 255, 1)) 
+            drop-shadow(0 0 60px rgba(0, 212, 255, 1))
+            drop-shadow(0 0 90px rgba(0, 255, 240, 0.8));
+    transform: scale(1.05);
+  }
 }
 
 .stat-label {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-top: 5px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-top: 10px;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.5px;
 }
 
 /* GRID CRIATIVO DOS PALESTRANTES */
@@ -510,7 +570,8 @@ body.navbar-shrunk {
 
 .circle-speaker:hover {
   transform: scale(1.2);
-  border-color: #FFD700;
+  border-color: #2BC8EA;
+  box-shadow: 0 12px 30px rgba(43, 200, 234, 0.6);
   z-index: 5;
 }
 
@@ -708,7 +769,10 @@ body.navbar-shrunk {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFD700;
+  background: linear-gradient(135deg, #980BF4, #2BC8EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 1.2rem;
   animation: floatIcon 6s ease-in-out infinite;
   box-shadow: 0 8px 20px rgba(152, 11, 244, 0.3);
@@ -1182,7 +1246,7 @@ body.navbar-shrunk {
 .decoration-2 {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #2BC8EA, #FFD700);
+  background: linear-gradient(135deg, #2BC8EA, #0F64F7);
   bottom: -30px;
   right: -30px;
   animation-delay: -2s;
@@ -1782,6 +1846,15 @@ body.navbar-shrunk {
   background-clip: text;
 }
 
+/* Gradiente claro para fundos escuros (usado na página de comunidade) */
+.gradient-text-light {
+  background: linear-gradient(135deg, #f0b3ff, #4da3ff, #5de4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
 .section-subtitle-modern {
   font-size: 1.25rem;
   color: #64748b;
@@ -1815,7 +1888,7 @@ body.navbar-shrunk {
 /* Grid Completo - Todos os Palestrantes */
 .speakers-grid-complete {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
@@ -1825,14 +1898,14 @@ body.navbar-shrunk {
 /* Responsividade para o grid completo */
 @media (max-width: 1200px) {
   .speakers-grid-complete {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 25px;
   }
 }
 
 @media (max-width: 992px) {
   .speakers-grid-complete {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
   }
 }
@@ -1927,7 +2000,7 @@ body.navbar-shrunk {
 }
 
 .speaker-content {
-  padding: 25px;
+  padding: 30px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1951,20 +2024,22 @@ body.navbar-shrunk {
 }
 
 .speaker-name {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #1a202c;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   flex-shrink: 0;
+  line-height: 1.3;
 }
 
 .speaker-bio {
   color: #64748b;
-  line-height: 1.5;
-  font-size: 0.9rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
   margin-bottom: 20px;
   flex: 1;
   min-height: 0;
+  overflow: visible;
 }
 
 .card-footer {
@@ -2186,7 +2261,10 @@ body.navbar-shrunk {
 .highlight-item i {
   margin-right: 10px;
   font-size: 1.3rem;
-  color: #FFD700;
+  background: linear-gradient(135deg, #980BF4, #2BC8EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .btn-ingresso-premium {
@@ -2470,13 +2548,16 @@ body.navbar-shrunk {
   position: absolute;
   background: white;
   border-radius: 20px;
-  padding: 20px;
+  padding: 25px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   gap: 15px;
   transition: all 0.3s ease;
   animation: cardFloat 6s infinite ease-in-out;
+  z-index: 5;
+  max-width: 280px;
+  min-width: 260px;
 }
 
 .visual-card:hover {
@@ -2485,19 +2566,19 @@ body.navbar-shrunk {
 }
 
 .card-1 {
-  top: 10%;
-  left: 0;
+  top: 8%;
+  left: 5%;
   animation-delay: 0s;
 }
 
 .card-2 {
-  top: 35%;
-  right: 10%;
+  top: 15%;
+  right: 5%;
   animation-delay: 2s;
 }
 
 .card-3 {
-  bottom: 15%;
+  bottom: 10%;
   left: 5%;
   animation-delay: 4s;
 }
@@ -2525,16 +2606,20 @@ body.navbar-shrunk {
 }
 
 .card-content h4 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #1a202c;
   margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .card-content p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #64748b;
   margin: 0;
+  line-height: 1.4;
+  white-space: normal;
 }
 
 /* Logo Central com Pulse */
@@ -3033,6 +3118,20 @@ body.navbar-shrunk {
   .community-hero-visual {
     height: 400px;
     margin-top: 50px;
+  }
+  
+  .visual-card {
+    max-width: 240px;
+    min-width: 220px;
+    padding: 20px;
+  }
+  
+  .card-content h4 {
+    font-size: 1.15rem;
+  }
+  
+  .card-content p {
+    font-size: 0.85rem;
   }
   
   .features-grid {
