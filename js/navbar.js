@@ -1,30 +1,68 @@
 const navbar = document.querySelector('.navbar');
-let lastUpdate = 0;
-let currentState = 'expanded';
+const body = document.body;
+let isScrolling = false;
+let scrollDirection = 'up';
+let lastScrollY = 0;
+let navbarState = 'expanded'; // 'expanded' ou 'shrunk'
 
-function updateNavbar() {
-  const now = Date.now();
-  if (now - lastUpdate < 100) return;
+// Configurações de threshold com hysteresis para evitar oscilação
+const SHRINK_THRESHOLD = 150;  // Scroll para baixo para encolher
+const EXPAND_THRESHOLD = 80;   // Scroll para cima para expandir
+const SCROLL_DELTA_MIN = 5;    // Movimento mínimo para considerar scroll
+
+function updateNavbarState() {
+  const currentScrollY = window.pageYOffset;
+  const scrollDelta = Math.abs(currentScrollY - lastScrollY);
   
-  const scrollY = window.scrollY;
+  // Ignora movimentos muito pequenos para evitar tremulação
+  if (scrollDelta < SCROLL_DELTA_MIN) {
+    return;
+  }
   
-  if (currentState === 'expanded' && scrollY > 200) {
+  // Determina direção do scroll
+  scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+  
+  // Lógica com hysteresis para evitar oscilação
+  if (navbarState === 'expanded' && currentScrollY > SHRINK_THRESHOLD && scrollDirection === 'down') {
+    // Encolhe quando rola para baixo além do threshold
     navbar.classList.add('shrink');
-    currentState = 'shrunk';
-    lastUpdate = now;
-  } else if (currentState === 'shrunk' && scrollY < 50) {
+    body.classList.add('navbar-shrunk');
+    navbarState = 'shrunk';
+  } else if (navbarState === 'shrunk' && currentScrollY < EXPAND_THRESHOLD && scrollDirection === 'up') {
+    // Expande quando rola para cima abaixo do threshold
     navbar.classList.remove('shrink');
-    currentState = 'expanded';
-    lastUpdate = now;
+    body.classList.remove('navbar-shrunk');
+    navbarState = 'expanded';
+  }
+  
+  lastScrollY = currentScrollY;
+}
+
+// Throttle otimizado usando requestAnimationFrame
+function throttledScrollHandler() {
+  if (!isScrolling) {
+    requestAnimationFrame(() => {
+      updateNavbarState();
+      isScrolling = false;
+    });
+    isScrolling = true;
   }
 }
 
-let throttleTimer = null;
-window.addEventListener('scroll', () => {
-  if (throttleTimer) return;
-  
-  throttleTimer = setTimeout(() => {
-    updateNavbar();
-    throttleTimer = null;
-  }, 50);
+// Event listener com passive para melhor performance
+window.addEventListener('scroll', throttledScrollHandler, { passive: true });
+
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+  lastScrollY = window.pageYOffset;
+  updateNavbarState();
 });
+
+// Tratamento especial para resize da janela
+window.addEventListener('resize', () => {
+  // Aguarda 100ms após resize para reajustar
+  setTimeout(() => {
+    lastScrollY = window.pageYOffset;
+    updateNavbarState();
+  }, 100);
+}, { passive: true });

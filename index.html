@@ -8,13 +8,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#inicio" aria-label="Ir para o início"> 
         <img src="img/logo3.png" alt="Empreender 40+">
@@ -30,251 +31,820 @@
           <li class="nav-item"><a class="nav-link" href="#local">Local</a></li>
           <li class="nav-item"><a class="nav-link" href="#inscricao">Inscreva-se</a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank" rel="noopener">YouTube</a></li>
-          <li class="nav-item"><a class="nav-link" href="#comunidade">Comunidade</a></li>
+          <li class="nav-item"><a class="nav-link" href="comunidade.html">Comunidade</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section apenas imagem -->
-  <!-- Hero Section apenas imagem -->
-<section class="hero" id="inicio">
-  <img src="img/banner_azul.png" alt="Banner Empreender 40+" class="hero-img">
+  <!-- Hero Section Criativo com Palestrantes -->
+<section class="hero-creative" id="inicio">
+  <!-- Fundo gradiente -->
+  <div class="hero-bg-gradient"></div>
+  
+  <div class="container-fluid">
+    <div class="row min-vh-100 align-items-center">
+      <!-- Coluna Principal com Informações -->
+      <div class="col-lg-6 col-md-12">
+        <div class="hero-main-content" data-aos="fade-right">
+          <!-- Badge do evento -->
+          <div class="event-badge mb-4">
+            <i class="bi bi-star-fill me-2"></i>
+            Edição 2024 • Evento Exclusivo
+          </div>
+          
+          <!-- Título Principal -->
+          <h1 class="hero-title mb-4">
+            <span class="title-main">EMPREENDER</span>
+            <span class="title-highlight">40+</span>
+            <span class="title-subtitle">O maior evento de empreendedorismo maduro do Brasil</span>
+          </h1>
+          
+          <!-- Informações do Evento em Grid -->
+          <div class="event-info-grid mb-5">
+            <div class="info-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="info-icon">
+                <i class="bi bi-calendar-event"></i>
+              </div>
+              <div class="info-content">
+                <strong>29 de Outubro</strong>
+                <span>Segunda-feira, 2024</span>
+              </div>
+            </div>
+            
+            <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="info-icon">
+                <i class="bi bi-clock"></i>
+              </div>
+              <div class="info-content">
+                <strong>8h às 18h</strong>
+                <span>10 horas de conteúdo</span>
+              </div>
+            </div>
+            
+            <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="info-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="info-content">
+                <strong>Teatro Bourbon Country</strong>
+                <span>Porto Alegre, RS</span>
+              </div>
+            </div>
+            
+            <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+              <div class="info-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <div class="info-content">
+                <strong>17 Palestrantes</strong>
+                <span>Líderes inspiradores</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Call to Actions -->
+          <div class="hero-actions" data-aos="fade-up" data-aos-delay="600">
+            <a href="#inscricao" class="btn-primary-hero">
+              <i class="bi bi-ticket-perforated me-2"></i>
+              Garantir Meu Ingresso
+              <span class="btn-shine"></span>
+            </a>
+            <a href="#sobre" class="btn-secondary-hero">
+              <i class="bi bi-play-circle me-2"></i>
+              Ver Mais Detalhes
+            </a>
+          </div>
+          
+          <!-- Stats rápidas -->
+          <div class="quick-stats mt-4" data-aos="fade-up" data-aos-delay="700">
+            <div class="stat-item">
+              <div class="stat-number">150</div>
+              <div class="stat-label">Vagas Limitadas</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">10h</div>
+              <div class="stat-label">de Conteúdo</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Presencial</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coluna com Grid Criativo dos Palestrantes -->
+      <div class="col-lg-6 col-md-12">
+        <div class="speakers-creative-grid" data-aos="fade-left" data-aos-delay="400">
+          <!-- Grid principal dos palestrantes -->
+          <div class="speakers-grid">
+            <!-- Palestrante destaque (maior) -->
+            <div class="speaker-featured">
+              <div class="speaker-photo">
+                <img src="img/palestrantes/pedro_janot.jpeg" alt="Pedro Janot">
+                <div class="speaker-overlay">
+                  <div class="speaker-name">Pedro Janot</div>
+                  <div class="speaker-title">Ex-CEO Azul Linhas Aéreas</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Grid de palestrantes menores -->
+            <div class="speakers-small-grid">
+              <div class="speaker-small">
+                <img src="img/palestrantes/cris_paz.jpeg" alt="Cris Páz">
+                <div class="speaker-mini-info">
+                  <span>Cris Páz</span>
+                </div>
+              </div>
+              
+              <div class="speaker-small">
+                <img src="img/palestrantes/luciano_potter.jpeg" alt="Luciano Potter">
+                <div class="speaker-mini-info">
+                  <span>Luciano Potter</span>
+                </div>
+              </div>
+              
+              <div class="speaker-small">
+                <img src="img/palestrantes/rodrigo_sabiah.jpeg" alt="Rodrigo Sabiah">
+                <div class="speaker-mini-info">
+                  <span>Rodrigo Sabiah</span>
+                </div>
+              </div>
+              
+              <div class="speaker-small">
+                <img src="img/palestrantes/alice_urbim.jpg" alt="Alice Urbim">
+                <div class="speaker-mini-info">
+                  <span>Alice Urbim</span>
+                </div>
+              </div>
+              
+              <div class="speaker-small">
+                <img src="img/palestrantes/fatima_torri.jpeg" alt="Fátima Torri">
+                <div class="speaker-mini-info">
+                  <span>Fátima Torri</span>
+                </div>
+              </div>
+              
+              <div class="speaker-small">
+                <img src="img/palestrantes/cesar_dias.jpeg" alt="César Dias">
+                <div class="speaker-mini-info">
+                  <span>César Dias</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Palestrantes em círculo decorativo -->
+            <div class="speakers-circle">
+              <div class="circle-speaker circle-1" data-name="Danielle Cosme">
+                <img src="img/palestrantes/danielle_cosme.jpeg" alt="Danielle Cosme">
+                <div class="speaker-tooltip">Danielle Cosme</div>
+              </div>
+              <div class="circle-speaker circle-2" data-name="Fábio Bernardi">
+                <img src="img/palestrantes/fabio_bernardi.webp" alt="Fábio Bernardi">
+                <div class="speaker-tooltip">Fábio Bernardi</div>
+              </div>
+              <div class="circle-speaker circle-3" data-name="Michel Couto">
+                <img src="img/palestrantes/michel_couto.jpeg" alt="Michel Couto">
+                <div class="speaker-tooltip">Michel Couto</div>
+              </div>
+              <div class="circle-speaker circle-4" data-name="André Foresti">
+                <img src="img/palestrantes/andre_foresti.jpeg" alt="André Foresti">
+                <div class="speaker-tooltip">André Foresti</div>
+              </div>
+              <div class="circle-speaker circle-5" data-name="Vinicius Mendes">
+                <img src="img/palestrantes/vinicius_mendes.jpeg" alt="Vinicius Mendes">
+                <div class="speaker-tooltip">Vinicius Mendes</div>
+              </div>
+            </div>
+            
+            <!-- Contador de palestrantes restantes -->
+            <div class="more-speakers">
+              <div class="more-count">
+                <span class="number">+5</span>
+                <span class="text">Mais<br>Palestrantes</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Decorações geométricas -->
+          <div class="geometric-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Floating elements -->
+  <div class="floating-elements">
+    <div class="float-icon float-1">
+      <i class="bi bi-lightbulb"></i>
+    </div>
+    <div class="float-icon float-2">
+      <i class="bi bi-graph-up-arrow"></i>
+    </div>
+    <div class="float-icon float-3">
+      <i class="bi bi-people"></i>
+    </div>
+  </div>
 </section>
 
   <!-- Sobre -->
-  <section id="sobre" class="py-5 container text-center">
-    <h2 class="fw-bold mb-4" style="color:#980BF4;">Sobre o Evento</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="sobre-card shadow-sm">
-          <h3 style="color:#0F64F7;">🎤 Inspiração</h3>
-          <p>Palestras transformadoras com líderes que se reinventaram após os 40.</p>
+  <section id="sobre" class="py-5">
+    <div class="container">
+      <!-- Título da seção com destaque -->
+      <div class="text-center mb-5">
+        <div class="section-badge">
+          <i class="bi bi-star-fill me-2"></i>
+          Sobre o Evento
         </div>
+        <h2 class="section-title">Por que Participar do Empreender 40+?</h2>
+        <p class="section-subtitle">Transforme sua experiência em seu maior ativo competitivo</p>
       </div>
-      <div class="col-md-4">
-        <div class="sobre-card shadow-sm">
-          <h3 style="color:#980BF4;">🤝 Networking</h3>
-          <p>Conexões valiosas para negócios, parcerias e novas oportunidades.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="sobre-card shadow-sm">
-          <h3 style="color:#E6B422;">📈 Aprendizado</h3>
-          <p>Conteúdos práticos para aplicar imediatamente no seu negócio.</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="sobre-text mt-5">
-      <h3>A Experiência é o Seu Maior Ativo</h3>
-      <p>O Empreender 40+ é um movimento nacional que transforma experiência em oportunidade, reposicionando profissionais com mais de 40 anos como protagonistas da inovação e da geração de valor no Brasil.</p>
-      <p>Nosso objetivo é combater o etarismo, apoiar transições de carreira e incentivar o empreendedorismo maduro, conectando pessoas que enxergam a idade como um ativo, não um obstáculo.</p>
-      <p>No dia 29 de outubro, no Teatro Bourbon Country em Porto Alegre, o evento reúne palestras, workshops, painéis e networking, oferecendo capacitação, inspiração e oportunidades para redescobrir seu potencial.</p>
-      <p>Mais do que um encontro, o Empreender 40+ faz parte de um ecossistema completo, com mentorias, treinamentos, grupos de relacionamento, canal no YouTube, podcast e publicações especializadas — para que sua experiência se transforme em resultados reais.</p>
-    </div>
+      <!-- Cards dos benefícios -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="benefit-card h-100">
+            <div class="benefit-icon">
+              <i class="bi bi-mic-fill"></i>
+            </div>
+            <h3>Inspiração</h3>
+            <p>Palestras transformadoras com líderes que se reinventaram após os 40 e criaram impacto real no mercado.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-card h-100">
+            <div class="benefit-icon">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h3>Networking</h3>
+            <p>Conexões valiosas para negócios, parcerias e novas oportunidades com profissionais experientes.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-card h-100">
+            <div class="benefit-icon">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h3>Aprendizado</h3>
+            <p>Conteúdos práticos e estratégias comprovadas para aplicar imediatamente no seu negócio.</p>
+          </div>
+        </div>
+      </div>
 
-    <!-- YouTube Video Embed Responsivo -->
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/dUrW92b9AGc" title="Empreender 40+" allowfullscreen></iframe>
+      <!-- Texto principal sobre o evento -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="main-content-card">
+            <h3 class="content-title">A Experiência é o Seu Maior Ativo</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <p>O <strong>Empreender 40+</strong> é um movimento nacional que transforma experiência em oportunidade, reposicionando profissionais com mais de 40 anos como protagonistas da inovação e da geração de valor no Brasil.</p>
+                <p>Nosso objetivo é combater o etarismo, apoiar transições de carreira e incentivar o empreendedorismo maduro, conectando pessoas que enxergam a idade como um ativo, não um obstáculo.</p>
+              </div>
+              <div class="col-md-6">
+                <p>No dia <strong>29 de outubro</strong>, no Teatro Bourbon Country em Porto Alegre, o evento reúne palestras, workshops, painéis e networking, oferecendo capacitação, inspiração e oportunidades para redescobrir seu potencial.</p>
+                <p>Mais do que um encontro, o Empreender 40+ faz parte de um ecossistema completo, com mentorias, treinamentos, grupos de relacionamento, canal no YouTube, podcast e publicações especializadas.</p>
+              </div>
+            </div>
+            
+            <!-- Destaque especial -->
+            <div class="highlight-box mt-4">
+              <div class="row align-items-center">
+                <div class="col-md-8">
+                  <h4><i class="bi bi-trophy-fill me-2"></i>Transforme sua Experiência em Resultados Reais</h4>
+                  <p class="mb-0">Junte-se a centenas de empreendedores que escolheram ver a maturidade como vantagem competitiva.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                  <a href="#inscricao" class="btn btn-highlight">
+                    <i class="bi bi-arrow-right-circle me-2"></i>
+                    Participar Agora
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seção de Vídeo Moderna -->
+      <div class="video-showcase" data-aos="fade-up" data-aos-delay="200">
+        <div class="video-header">
+          <h3 class="video-title">Assista ao que nos motiva</h3>
+          <p class="video-subtitle">Conheça a essência do Empreender 40+ e inspire-se</p>
+        </div>
+        <div class="video-wrapper">
+          <div class="video-frame">
+            <iframe 
+              src="https://www.youtube.com/embed/dUrW92b9AGc" 
+              title="Empreender 40+"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+            <div class="video-overlay">
+              <div class="play-icon">
+                <i class="bi bi-play-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div class="video-decorations">
+            <div class="decoration decoration-1"></div>
+            <div class="decoration decoration-2"></div>
+            <div class="decoration decoration-3"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Palestrantes (mantendo seus originais) -->
-  <section id="palestrantes" class="palestrantes-section">
+  <!-- Palestrantes -->
+  <section id="palestrantes" class="palestrantes-section-modern">
     <div class="container">
-      <h2 class="section-title">Palestrantes</h2>
-      <div class="cards-wrapper">
+      <!-- Título da seção com design moderno -->
+      <div class="section-header-modern" data-aos="fade-up">
+        <div class="section-badge-modern">
+          <div class="badge-icon">
+            <i class="bi bi-stars"></i>
+          </div>
+          <span>Conheça Nossos Palestrantes</span>
+        </div>
+        <h2 class="section-title-modern">Líderes que Transformaram 
+          <span class="gradient-text">Experiência em Sucesso</span>
+        </h2>
+        <p class="section-subtitle-modern">Histórias inspiradoras de quem fez dos 40+ o início de uma nova jornada de conquistas</p>
+        <div class="title-decoration">
+          <div class="decoration-dot"></div>
+          <div class="decoration-line"></div>
+          <div class="decoration-dot"></div>
+        </div>
+      </div>
 
-        <!-- Card 1 -->
-         <div class="palestrante-card">
-          <img src="img/palestrantes/pedro_janot.jpeg" alt="Pedro Janot" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Pedro Janot</h3>
-            <p>Executivo com carreira brilhante no varejo e na aviação, foi CEO fundador da Azul Linhas Aéreas. Após os 40 anos, enfrentou um acidente que o deixou tetraplégico e transformou a adversidade em reinvenção pessoal e profissional. Tornou-se palestrante inspirador, autor de livros e mentor de negócios, impactando milhares de pessoas com sua visão de resiliência.</p>
-            <a href="https://www.linkedin.com/in/pedrojanot/?originalSubdomain=br" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
-          </div>
-        </div>
-         <!-- Cad 2 -->
-          <div class="palestrante-card">
-          <img src="img/palestrantes/luciano_potter.jpeg" alt="luciano_potter" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Luciano Potter</h3>
-            <p>Com 25 anos de experiência em rádio, TV, jornal e internet, o palestrante dedica sua trajetória a um ofício atemporal: contar histórias. Especialista em comunicação que conecta, emociona e transforma, hoje compartilha seu conhecimento em palestras sobre o poder da escuta e a força das relações. Parceiro de marcas e presença ativa nas redes, segue encantando plateias em todos os palcos possíveis.</p>
-            <a href="https://www.linkedin.com/in/luciano-potter/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
-          </div>
-        </div>
-        <!-- Cad 2 -->
-          <div class="palestrante-card">
-          <img src="img/palestrantes/cris_paz.jpeg" alt="Cris Páz" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Cris Páz</h3>
-            <p>Escritora, publicitária e criadora de conteúdo, pioneira com o blog “Hoje Vou Assim”. Após os 40 anos, mudou sua assinatura para Cris Pàz e passou a se dedicar fortemente a palestras, livros, podcasts e colunas que abordam longevidade, saúde mental e etarismo. É uma das vozes mais influentes sobre envelhecimento ativo e reinvenção pessoal no Brasil.</p>
-            <a href="https://www.linkedin.com/in/eucrispaz/?originalSubdomain=br" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
-          </div>
-        </div>
-         <!-- Cad 2 -->
-          <div class="palestrante-card">
-          <img src="img/palestrantes/cesar_dias.jpeg" alt="Cesar Cidade Dias" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Cesar Cidade Dias</h3>
-            <p>Jornalista gaúcho com trajetória marcada pela versatilidade. Atuou em rádio, TV, jornal e internet, sempre com o olhar atento às transformações da comunicação. Com experiência em reportagem, apresentação e gestão de conteúdo, construiu uma carreira sólida baseada no poder das histórias. Hoje, compartilha sua vivência em palestras que inspiram e conectam pessoas.</p>
-            <a href="https://www.linkedin.com/in/cesar-cidade-dias-81b438162/?originalSubdomain=br" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
-          </div>
-        </div>
-        <!-- Card 8 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/rodrigo_sabiah.jpeg" alt="Rodrigo Sabiah" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Rodrigo Sabiah</h3>
-            <p>Transformou sua história em motor de impacto social. Egresso do sistema prisional, fundou o projeto Reciclando Vidas, referência no trabalho com ressocialização de egressos, e criou o Brechó para o Bem, que durante a pandemia destinou recursos para comunidades carentes. Palestrante em escolas, universidades, empresas e eventos como TEDx e Freedom Scholars, já compartilhou sua trajetória no Brasil e no exterior. Foi o primeiro egresso brasileiro selecionado para o Global Freedom Fellowship, na África do Sul, e hoje inspira milhares de pessoas com sua atuação em empreendedorismo social, inclusão e transformação de vidas.</p>
-            <a href="https://www.linkedin.com/in/rodrigo-sabiah/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
-          </div>
-        </div>
-        <!-- Card 8 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/fatima_torri.jpeg" alt="Fática Torri" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Fátima Torri</h3>
-            <p>Jornalista e empresária, fundadora da FTcom, referência em comunicação corporativa. Depois dos 40, criou a plataforma Fala Feminina, que dá voz às mulheres em espaços de liderança e promove debates sobre diversidade e inclusão. Consolidou-se como empreendedora madura, com mais de duas décadas de impacto no mercado.</p>
-            <a href="https://www.linkedin.com/in/fatima-torri/?originalSubdomain=br" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/vinicius_mendes.jpeg" alt="Vinicius Mendes Lima" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Vinicius Mendes Lima</h3>
-            <p>Fundador da Besouro de Fomento Social, e responsável pela criação de cerca de 180 mil negócios, em mais de 900 favelas de todo o Brasil, com geração de renda acima dos R$ 500 milhões por ano. Administrador e mestre em Marketing Estratégico leciono em instituições no Brasil e na Argentina. Escrevi três obras de referência na área da Administração: A Riqueza das Favelas, By Necessity - Plano de Negócios por Necessidade e Canvas das Favelas.</p>
-            <a href="https://www.linkedin.com/in/viniciusmendeslima/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+      <!-- Grid Moderno de Palestrantes - Todos Visíveis -->
+      <div class="speakers-grid-complete">
+        
+        <!-- Pedro Janot -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/pedro_janot.jpeg" alt="Pedro Janot" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Liderança</span>
+              </div>
+              <h4 class="speaker-name">Pedro Janot</h4>
+              <p class="speaker-bio">Executivo com carreira brilhante no varejo e na aviação, foi CEO fundador da Azul Linhas Aéreas. Após os 40 anos, transformou adversidade em reinvenção pessoal e profissional.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/pedrojanot/?originalSubdomain=br" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Card 4 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/alice_urbim.jpg" alt="Alice Urbim" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Alice Urbim</h3>
-            <p>Nascida em Garibaldi (1954), iniciou no audiovisual em 1975 como roteirista, produtora e diretora na RBS TV, onde criou programas como Histórias Curtas, Curtas Gaúchos, Patrola e Anonymus Gourmet. Atuou como Gerente de Programação e participou da implantação do Canal Rural e da TV COM. Hoje é mídia trainer, palestrante e coach, com foco em etarismo e carreira 50+.</p>
-            <a href="https://www.linkedin.com/in/alice-urbim-038a06252/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+        <!-- Luciano Potter -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/luciano_potter.jpeg" alt="Luciano Potter" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Comunicação</span>
+              </div>
+              <h4 class="speaker-name">Luciano Potter</h4>
+              <p class="speaker-bio">Com 25 anos de experiência em rádio, TV, jornal e internet, dedica sua trajetória a um ofício atemporal: contar histórias. Especialista em comunicação que conecta, emociona e transforma.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/luciano-potter/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Card 6 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/aod_cunha.jpeg" alt="Aod Cunha" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Aod Cunha</h3>
-            <p>Experiência profissional extensa, desenvolvida em cargos de liderança nos setores público e privado, atuando como secretário de finanças, banqueiro de investimento/diretor-gerente, além de membro e presidente de conselhos de empresas brasileiras.</p>
-            <a href="https://www.linkedin.com/in/aod-cunha-855777152/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+
+        <!-- Cris Páz -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/cris_paz.jpeg" alt="Cris Páz" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Longevidade</span>
+              </div>
+              <h4 class="speaker-name">Cris Páz</h4>
+              <p class="speaker-bio">Escritora, publicitária e criadora de conteúdo, pioneira com o blog "Hoje Vou Assim". Após os 40 anos, passou a se dedicar fortemente a palestras sobre longevidade e reinvenção pessoal.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/eucrispaz/?originalSubdomain=br" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
-          <!-- Card 5 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/danielle_cosme.jpeg" alt="Danielle Cosme" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Danielle Cosme</h3>
-            <p>Líder apaixonada por tecnologia e inovação, é fundadora e CEO da Clã Conexões Empreendedoras e criadora do Programa EVA, que capacita mulheres líderes e fortalece a representatividade feminina no ecossistema de inovação. Palestrante TEDx, também atua como consultora de inovação em parceria com SebraeRS e LAB FecomércioRS, inspirando empreendedores a transformar ideias em realidade.</p>
-            <a href="https://www.linkedin.com/in/danielle-cosme/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+
+        <!-- César Cidade Dias -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/cesar_dias.jpeg" alt="César Cidade Dias" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Jornalismo</span>
+              </div>
+              <h4 class="speaker-name">César Cidade Dias</h4>
+              <p class="speaker-bio">Jornalista gaúcho com trajetória marcada pela versatilidade. Atuou em rádio, TV, jornal e internet, sempre com o olhar atento às transformações da comunicação.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/cesar-cidade-dias-81b438162/?originalSubdomain=br" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Card 5 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/tulio_milman.jpeg" alt="Tulio Milman" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Tulio Milman</h3>
-            <p>Consultor que conecta propósito e geração de valor por meio da comunicação. Atuou 27 anos no Grupo RBS como repórter, editor e colunista, cobrindo Olimpíadas e Paralimpíadas. Estudou Liderança em Israel, RH na EAE Barcelona e Marketing na ESPM. Finalista no NY TV Festival, autor de Vença com a Mídia e membro de conselhos de instituições sociais.</p>
-            <a href="https://www.linkedin.com/in/tulio-milman-94978290/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+
+        <!-- Rodrigo Sabiah -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="500">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/rodrigo_sabiah.jpeg" alt="Rodrigo Sabiah" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Impacto Social</span>
+              </div>
+              <h4 class="speaker-name">Rodrigo Sabiah</h4>
+              <p class="speaker-bio">Transformou sua história em motor de impacto social. Egresso do sistema prisional, fundou o projeto Reciclando Vidas, referência no trabalho com ressocialização de egressos.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/rodrigo-sabiah/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Card 4 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/michel_couto.jpeg" alt="Michel Couto" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Michel Couto</h3>
-            <p>De vigia a diretor de arte, sua trajetória é marcada por criatividade e propósito. Fundador da Agência Formô, líder comunitário e articulador periférico no Morro da Cruz, idealizou o Espaço e=mc² e o Hub Formô, impulsionando inovação, cultura e negócios nas periferias. Atualmente, coordena o projeto Território Inovador no Pacto Alegre, conectando pessoas, ideias e transformações.</p>
-            <a href="https://www.linkedin.com/in/michel-couto-832646103/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+
+        <!-- Fátima Torri -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="600">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/fatima_torri.jpeg" alt="Fátima Torri" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Empreendedorismo</span>
+              </div>
+              <h4 class="speaker-name">Fátima Torri</h4>
+              <p class="speaker-bio">Jornalista e empresária, fundadora da FTcom, referência em comunicação corporativa. Depois dos 40, criou a plataforma Fala Feminina, promovendo diversidade e inclusão.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/fatima-torri/?originalSubdomain=br" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
-         <!-- Card 4 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/alexandre_maio.jpeg" alt="Alexandre Maio" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Alexandre Maio</h3>
-            <p>Alexandre de Maio é um dos principais especialistas em inovação e criatividade, fundador da Salve Games. Com uma abordagem visionária, Alexandre apresenta palestras inspiradoras sobre o impacto da inteligência artificial na música e na produção de jogos. Ele compartilha sua expertise sobre como a tecnologia está revolucionando o processo de criação artística, com ênfase no impacto transformador na música e nos videogames. Reconhecido por sua capacidade de integrar inovação com expressão artística, Alexandre de Maio é uma referência no cenário atual de novas tecnologias no entretenimento.</p>
-            <a href="https://www.linkedin.com/in/alexandre-de-maio-8a14a771/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+
+        <!-- Vinicius Mendes Lima -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="700">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/vinicius_mendes.jpeg" alt="Vinicius Mendes Lima" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Inovação Social</span>
+              </div>
+              <h4 class="speaker-name">Vinicius Mendes Lima</h4>
+              <p class="speaker-bio">Fundador da Besouro de Fomento Social, responsável pela criação de cerca de 180 mil negócios em mais de 900 favelas de todo o Brasil, com geração de renda acima dos R$ 500 milhões por ano.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/viniciusmendeslima/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Card 4 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/fabio_bernardi.webp" alt="Fabio Bernardi" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Fabio Bernardi</h3>
-            <p>CEO da HOC – House Of Creativity, em Porto Alegre. Líder inovador, conecta marcas e pessoas por meio de estratégias criativas e soluções personalizadas. Apaixonado por branding e comunicação, impulsiona negócios com criatividade, tecnologia e visão de futuro.</p>
-            <a href="https://www.linkedin.com/in/f%C3%A1bio-bernardi-502b0426b/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+
+        <!-- Alice Urbim -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="800">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/alice_urbim.jpg" alt="Alice Urbim" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Audiovisual</span>
+              </div>
+              <h4 class="speaker-name">Alice Urbim</h4>
+              <p class="speaker-bio">Nascida em Garibaldi (1954), iniciou no audiovisual em 1975 como roteirista, produtora e diretora na RBS TV. Hoje é mídia trainer, palestrante e coach, com foco em etarismo e carreira 50+.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/alice-urbim-038a06252/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Card 7 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/jair_kobe.jpeg" alt="Jair Kobe" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Jair Kobe</h3>
-            <p>Jair Kobe é humorista, ator e diretor, criador do personagem Guri de Uruguaiana, um dos maiores fenômenos do humor no sul do Brasil. Com seu estilo irreverente, mistura música, piadas e sátiras da cultura gaúcha, lotando teatros e conquistando fãs em todo o país com apresentações que unem tradição e modernidade.</p>
-            <a href="https://www.instagram.com/jairkobe/" target="_blank" class="linkedin-link">
-              <img src="img/icons/instagram.webp" alt="LinkedIn" class="linkedin-icon">
-            </a>
+
+        <!-- Aod Cunha -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="900">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/aod_cunha.jpeg" alt="Aod Cunha" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Finanças</span>
+              </div>
+              <h4 class="speaker-name">Aod Cunha</h4>
+              <p class="speaker-bio">Experiência profissional extensa, desenvolvida em cargos de liderança nos setores público e privado, atuando como secretário de finanças, banqueiro de investimento/diretor-gerente.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/aod-cunha-855777152/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Card 4 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/andre_foresti.jpeg" alt="André Foresti" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>André Foresti</h3>
-            <p>Publicitário e estrategista de marcas, com trajetória em grandes agências. Ao ultrapassar os 40 anos, fundou o hub Unplanned e a consultoria TroubleMakers, reposicionando sua carreira para provocar transformação cultural em empresas. Hoje é referência em inovação, criatividade e liderança disruptiva.</p>
-            <a href="https://www.linkedin.com/in/andr%C3%A9-foresti-28a323a/?originalSubdomain=br" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+
+        <!-- Danielle Cosme -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="1000">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/danielle_cosme.jpeg" alt="Danielle Cosme" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Inovação</span>
+              </div>
+              <h4 class="speaker-name">Danielle Cosme</h4>
+              <p class="speaker-bio">Líder apaixonada por tecnologia e inovação, é fundadora e CEO da Clã Conexões Empreendedoras e criadora do Programa EVA, que capacita mulheres líderes.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/danielle-cosme/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Card 4 -->
-        <div class="palestrante-card">
-          <img src="img/palestrantes/fabinho_vargas.jpeg" alt="Fabinho Vargas" class="palestrante-foto">
-          <div class="palestrante-info">
-            <h3>Fabinho Vargas</h3>
-            <p>Cantor, compositor, escritor e empreendedor. Fundador do grupo Tchê Guri, lançou 11 CDs e 1 DVD, conquistando 2 discos de ouro e indicação ao Latin Grammy. Em carreira solo, soma 3 CDs e mais de 200 canções gravadas. Autor do livro Empreender 40+, é CEO de empresas, palestrante e comunicador, graduado em Marketing, pós-graduando em Teologia e mestrando em Administração pela PUCRS.</p>
-            <a href="hhttps://www.linkedin.com/in/fabinho-vargas-629052b0/" target="_blank" class="linkedin-link">
-              <img src="img/icons/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-            </a>
+
+        <!-- Tulio Milman -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="1100">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/tulio_milman.jpeg" alt="Tulio Milman" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Propósito</span>
+              </div>
+              <h4 class="speaker-name">Tulio Milman</h4>
+              <p class="speaker-bio">Consultor que conecta propósito e geração de valor por meio da comunicação. Atuou 27 anos no Grupo RBS como repórter, editor e colunista, cobrindo Olimpíadas e Paralimpíadas.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/tulio-milman-94978290/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
           </div>
         </div>
-      
+
+        <!-- Michel Couto -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="1200">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/michel_couto.jpeg" alt="Michel Couto" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Periferia</span>
+              </div>
+              <h4 class="speaker-name">Michel Couto</h4>
+              <p class="speaker-bio">De vigia a diretor de arte, sua trajetória é marcada por criatividade e propósito. Fundador da Agência Formô, líder comunitário e articulador periférico no Morro da Cruz.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/michel-couto-832646103/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alexandre Maio -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="1300">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/alexandre_maio.jpeg" alt="Alexandre Maio" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">IA & Games</span>
+              </div>
+              <h4 class="speaker-name">Alexandre Maio</h4>
+              <p class="speaker-bio">Um dos principais especialistas em inovação e criatividade, fundador da Salve Games. Apresenta palestras inspiradoras sobre o impacto da inteligência artificial na música e na produção de jogos.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/alexandre-de-maio-8a14a771/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- André Foresti -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="1400">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/andre_foresti.jpeg" alt="André Foresti" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Criatividade</span>
+              </div>
+              <h4 class="speaker-name">André Foresti</h4>
+              <p class="speaker-bio">Publicitário e estrategista de marcas, com trajetória em grandes agências. Ao ultrapassar os 40 anos, fundou o hub Unplanned e a consultoria TroubleMakers, reposicionando sua carreira para provocar transformação cultural em empresas.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/andr%C3%A9-foresti-28a323a/?originalSubdomain=br" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fábio Bernardi -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="1500">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/fabio_bernardi.webp" alt="Fábio Bernardi" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Branding</span>
+              </div>
+              <h4 class="speaker-name">Fábio Bernardi</h4>
+              <p class="speaker-bio">CEO da HOC – House Of Creativity, em Porto Alegre. Líder inovador, conecta marcas e pessoas por meio de estratégias criativas e soluções personalizadas. Apaixonado por branding e comunicação.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/f%C3%A1bio-bernardi-502b0426b/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jair Kobe -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="1600">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/jair_kobe.jpeg" alt="Jair Kobe" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Humor</span>
+              </div>
+              <h4 class="speaker-name">Jair Kobe</h4>
+              <p class="speaker-bio">Humorista, ator e diretor, criador do personagem Guri de Uruguaiana, um dos maiores fenômenos do humor no sul do Brasil. Com seu estilo irreverente, mistura música, piadas e sátiras da cultura gaúcha.</p>
+              <div class="card-footer">
+                <a href="https://www.instagram.com/jairkobe/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fabinho Vargas -->
+        <div class="speaker-card-modern" data-aos="fade-up" data-aos-delay="1700">
+          <div class="card-inner">
+            <div class="speaker-image-container">
+              <img src="img/palestrantes/fabinho_vargas.png" alt="Fabinho Vargas" class="speaker-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="speaker-content">
+              <div class="speaker-meta">
+                <span class="speaker-category">Empreendedorismo</span>
+              </div>
+              <h4 class="speaker-name">Fabinho Vargas</h4>
+              <p class="speaker-bio">Empresário, palestrante, escritor e comunicador. Fundador do Tchê Guri, reconhecido com Grammy Latino e Top of Mind. CEO do Escritório Maestro e cofundador do Empreender 40+, acredita que quem busca a felicidade encontra soluções pelo caminho.</p>
+              <div class="card-footer">
+                <a href="https://www.linkedin.com/in/fabinho-vargas-629052b0/" target="_blank" class="linkedin-link-modern">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <div class="card-decoration"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -299,29 +869,309 @@
   <!-- Inscrição -->
   <section id="inscricao" class="inscricao-section">
     <div class="container">
-      <h2>Garanta Seu Ingresso</h2>
-      <p>Não perca a chance de participar do maior evento de empreendedorismo 40+ do Brasil.</p>
-      <a href="https://uhuu.com/evento/rs/porto-alegre/empreender-40-15217" target="_blank" rel="noopener" class="btn-ingresso">Comprar Ingresso na Uhuu</a>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="inscricao-badge mb-4">
+            <i class="bi bi-calendar-check me-2"></i>
+            Últimas Vagas Disponíveis
+          </div>
+          <h2 class="display-4 fw-bold mb-4">Garanta Seu Ingresso</h2>
+          <p class="lead mb-4">
+            Não perca a chance de participar do <strong>maior evento de empreendedorismo 40+</strong> do Brasil. 
+            Uma experiência transformadora que vai acelerar sua jornada empreendedora.
+          </p>
+          
+          <div class="event-highlights mb-5">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="highlight-item">
+                  <i class="bi bi-star-fill"></i>
+                  <span>17 Palestrantes</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="highlight-item">
+                  <i class="bi bi-clock-fill"></i>
+                  <span>10 Horas de Conteúdo</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="highlight-item">
+                  <i class="bi bi-people-fill"></i>
+                  <span>Networking Premium</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <a href="https://uhuu.com/evento/rs/porto-alegre/empreender-40-15217" target="_blank" rel="noopener" class="btn-ingresso-premium">
+            <i class="bi bi-ticket-perforated me-2"></i>
+            Comprar Ingresso na Uhuu
+            <span class="btn-subtitle">Acesso completo ao evento</span>
+          </a>
+          
+          <div class="security-badges mt-4">
+            <small class="text-white-50">
+              <i class="bi bi-shield-check me-1"></i>
+              Compra 100% segura • Cancelamento flexível
+            </small>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Comunidade -->
-<section id="comunidade" class="py-5 container text-center">
-  <h2 class="fw-bold mb-4" style="color:#980BF4;">Comunidade Empreender 40+</h2>
-  <p class="lead">
-    O nosso evento não termina no palco. ✨<br> 
-    Você poderá fazer parte de uma <strong>comunidade exclusiva</strong>, com grupos de networking, mentorias coletivas e conteúdos especiais.<br><br>
-    Uma rede de apoio para que o aprendizado e as conexões continuem muito além do evento.
-  </p>
-  <a href="#" class="btn btn-primary mt-3">Quero fazer parte</a>
-</section>
-
-
-  <!-- Rodapé -->
-  <footer class="text-center">
+  <!-- Comunidade - Design Moderno -->
+  <section id="comunidade" class="community-section-index">
+    <div class="community-bg-pattern"></div>
+    
     <div class="container">
-      <p class="mb-1">Empreender 40+ &copy; 2025</p>
-      <p class="mb-0"><a href="https://www.empreender40mais.com" target="_blank" rel="noopener">www.empreender40mais.com</a></p>
+      <div class="row align-items-center">
+        <!-- Coluna de Conteúdo -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="community-content">
+            <div class="community-badge">
+              <i class="bi bi-rocket-takeoff-fill me-2"></i>
+              Em Breve
+            </div>
+            
+            <h2 class="community-title">
+              Faça Parte da Nossa
+              <span class="gradient-text-community">Comunidade</span>
+            </h2>
+            
+            <p class="community-description">
+              O evento é apenas o começo! 🚀 Continue sua jornada em uma <strong>plataforma digital exclusiva</strong> 
+              com networking estratégico, mentorias, conteúdos premium e muito mais.
+            </p>
+            
+            <div class="community-features-list">
+              <div class="feature-item-community">
+                <div class="feature-icon-small">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="feature-text-small">
+                  <strong>Networking Qualificado</strong>
+                  <span>Conecte-se com empreendedores da sua área</span>
+                </div>
+              </div>
+              
+              <div class="feature-item-community">
+                <div class="feature-icon-small">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </div>
+                <div class="feature-text-small">
+                  <strong>Conteúdo Exclusivo</strong>
+                  <span>Webinars, cursos e materiais especializados</span>
+                </div>
+              </div>
+              
+              <div class="feature-item-community">
+                <div class="feature-icon-small">
+                  <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <div class="feature-text-small">
+                  <strong>Mentorias e Grupos</strong>
+                  <span>Aprenda com quem já trilhou o caminho</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="community-cta-wrapper">
+              <a href="comunidade.html" class="btn-community-join">
+                <i class="bi bi-arrow-right-circle-fill me-2"></i>
+                Conhecer a Plataforma
+              </a>
+              <div class="community-free-badge">
+                <i class="bi bi-gift-fill me-2"></i>
+                100% Gratuito
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Coluna Visual -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="community-visual-wrapper">
+            <!-- Cards Decorativos -->
+            <div class="community-card-float card-float-1">
+              <div class="card-float-icon">
+                <i class="bi bi-chat-dots-fill"></i>
+              </div>
+              <div class="card-float-content">
+                <div class="card-number">1000+</div>
+                <div class="card-label">Membros</div>
+              </div>
+            </div>
+            
+            <div class="community-card-float card-float-2">
+              <div class="card-float-icon">
+                <i class="bi bi-calendar-event-fill"></i>
+              </div>
+              <div class="card-float-content">
+                <div class="card-number">50+</div>
+                <div class="card-label">Eventos</div>
+              </div>
+            </div>
+            
+            <div class="community-card-float card-float-3">
+              <div class="card-float-icon">
+                <i class="bi bi-trophy-fill"></i>
+              </div>
+              <div class="card-float-content">
+                <div class="card-number">100%</div>
+                <div class="card-label">Gratuito</div>
+              </div>
+            </div>
+            
+            <!-- Círculo Central -->
+            <div class="community-circle-center">
+              <div class="circle-pulse"></div>
+              <div class="circle-pulse delay-1"></div>
+              <div class="circle-pulse delay-2"></div>
+              <div class="circle-content">
+                <i class="bi bi-people-fill"></i>
+                <span>Comunidade<br>40+</span>
+              </div>
+            </div>
+            
+            <!-- Linhas de Conexão -->
+            <svg class="connection-lines" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+              <line x1="200" y1="200" x2="80" y2="80" stroke="url(#gradient1)" stroke-width="2" stroke-dasharray="5,5">
+                <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite" />
+              </line>
+              <line x1="200" y1="200" x2="320" y2="100" stroke="url(#gradient1)" stroke-width="2" stroke-dasharray="5,5">
+                <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite" />
+              </line>
+              <line x1="200" y1="200" x2="100" y2="320" stroke="url(#gradient1)" stroke-width="2" stroke-dasharray="5,5">
+                <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite" />
+              </line>
+              <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#980BF4;stop-opacity:0.3" />
+                  <stop offset="100%" style="stop-color:#0F64F7;stop-opacity:0.3" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Rodapé Moderno -->
+  <footer class="modern-footer">
+    <div class="footer-bg-gradient"></div>
+    
+    <div class="container">
+      <!-- Seção Principal do Footer -->
+      <div class="footer-main">
+        <div class="row g-4">
+          <!-- Coluna 1: Logo e Descrição -->
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
+              <img src="img/logo3.png" alt="Empreender 40+" class="footer-logo">
+              <p class="footer-description">
+                Transformando experiência em oportunidade. O maior evento de empreendedorismo maduro do Brasil.
+              </p>
+              <div class="footer-social">
+                <a href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank" rel="noopener" class="social-icon">
+                  <i class="bi bi-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/empreender_40mais/" target="_blank" rel="noopener" class="social-icon">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://wa.me/5551991086971" target="_blank" rel="noopener" class="social-icon">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Coluna 2: Links Rápidos -->
+          <div class="col-lg-2 col-md-6">
+            <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+              <h4 class="footer-title">Navegação</h4>
+              <ul class="footer-menu">
+                <li><a href="#inicio"><i class="bi bi-chevron-right"></i> Início</a></li>
+                <li><a href="#sobre"><i class="bi bi-chevron-right"></i> Sobre</a></li>
+                <li><a href="#palestrantes"><i class="bi bi-chevron-right"></i> Palestrantes</a></li>
+                <li><a href="#local"><i class="bi bi-chevron-right"></i> Local</a></li>
+                <li><a href="#inscricao"><i class="bi bi-chevron-right"></i> Inscreva-se</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Coluna 3: Recursos -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-links" data-aos="fade-up" data-aos-delay="300">
+              <h4 class="footer-title">Recursos</h4>
+              <ul class="footer-menu">
+                <li><a href="comunidade.html"><i class="bi bi-chevron-right"></i> Comunidade</a></li>
+                <li><a href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank"><i class="bi bi-chevron-right"></i> YouTube</a></li>
+                <li><a href="#inscricao"><i class="bi bi-chevron-right"></i> Ingressos</a></li>
+                <li><a href="#palestrantes"><i class="bi bi-chevron-right"></i> Programação</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Coluna 4: Contato -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-contact" data-aos="fade-up" data-aos-delay="400">
+              <h4 class="footer-title">Contato</h4>
+              <ul class="contact-info">
+                <li>
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span>Teatro Bourbon Country<br>Porto Alegre, RS</span>
+                </li>
+                <li>
+                  <i class="bi bi-calendar-event-fill"></i>
+                  <span>29 de Outubro, 2024<br>8h às 18h</span>
+                </li>
+                <li>
+                  <i class="bi bi-envelope-fill"></i>
+                  <a href="mailto:contato@empreender40mais.com">contato@empreender40mais.com</a>
+                </li>
+                <li>
+                  <i class="bi bi-whatsapp"></i>
+                  <a href="https://wa.me/5551991086971" target="_blank">(51) 99108-6971</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Separador -->
+      <div class="footer-divider"></div>
+      
+      <!-- Seção Bottom do Footer -->
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="footer-copyright">
+              &copy; 2025 <strong>Empreender 40+</strong>. Todos os direitos reservados.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-links-inline">
+              <a href="#" class="footer-link-inline">Política de Privacidade</a>
+              <span class="separator">•</span>
+              <a href="#" class="footer-link-inline">Termos de Uso</a>
+              <span class="separator">•</span>
+              <a href="https://www.empreender40mais.com" target="_blank" class="footer-link-inline">www.empreender40mais.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Decoração de fundo -->
+      <div class="footer-decoration">
+        <div class="decoration-shape shape-1"></div>
+        <div class="decoration-shape shape-2"></div>
+        <div class="decoration-shape shape-3"></div>
+      </div>
     </div>
   </footer>
 
@@ -333,9 +1183,19 @@
   <!-- JS do Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
   <!-- JS personalizado da Navbar -->
   <script src="js/navbar.js"></script>
+  
+  <!-- Inicializar AOS -->
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+  </script>
 </body>
 </html>
-
-
