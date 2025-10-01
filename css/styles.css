@@ -1672,9 +1672,43 @@ body.navbar-shrunk {
 }
 
 /* WHATSAPP FLOAT */
-.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 999; text-decoration: none; transition: transform 0.3s ease; }
-.whatsapp-float:hover { transform: scale(1.1); }
-.whatsapp-float .bi { line-height: 1; }
+.whatsapp-float { 
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  background-color: #25D366; 
+  color: #fff; 
+  border-radius: 50%; 
+  width: 60px; 
+  height: 60px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 28px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+  z-index: 999; 
+  text-decoration: none; 
+  transition: transform 0.3s ease; 
+}
+
+.whatsapp-float:hover { 
+  transform: scale(1.1); 
+}
+
+.whatsapp-float .bi { 
+  line-height: 1; 
+}
+
+/* Ajuste do botão WhatsApp no mobile */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 30px;
+    right: 15px;
+    width: 56px;
+    height: 56px;
+    font-size: 26px;
+  }
+}
 
 /* SEÇÃO DE PALESTRANTES MODERNA */
 .palestrantes-section-modern {
@@ -3285,8 +3319,8 @@ body.navbar-shrunk {
 }
 
 .card-float-2 {
-  top: 40%;
-  right: 10%;
+  top: 10%;
+  right: 0;
   animation-delay: 2s;
 }
 
