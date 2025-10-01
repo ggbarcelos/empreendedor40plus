@@ -17,7 +17,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff; color: #3
   z-index: 1030;
   will-change: height, padding;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .navbar .container {
@@ -25,6 +25,8 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff; color: #3
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .navbar-brand img {
@@ -63,6 +65,21 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff; color: #3
   background: transparent;
 }
 
+/* Botão hambúrguer - sempre visível e clicável */
+.navbar-toggler {
+  position: relative !important;
+  z-index: 999999 !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+}
+
+/* Garantir que navbar-expand-lg não esconda o botão em mobile */
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    display: block !important;
+  }
+}
+
 /* Ajuste para evitar sobreposição de conteúdo */
 body {
   padding-top: 280px;
@@ -78,6 +95,7 @@ body.navbar-shrunk {
   .navbar {
     height: 120px;
     padding: 10px 15px;
+    overflow: visible !important;
   }
   
   .navbar-brand img {
@@ -87,6 +105,7 @@ body.navbar-shrunk {
   .navbar.shrink {
     height: 60px;
     padding: 5px 15px;
+    overflow: visible !important;
   }
   
   .navbar.shrink .navbar-brand img {
@@ -94,21 +113,67 @@ body.navbar-shrunk {
   }
   
   .navbar-toggler {
-    border: 2px solid #fff;
-    padding: 4px 8px;
+    border: 2px solid #fff !important;
+    padding: 8px 12px !important;
+    position: relative !important;
+    z-index: 99999 !important;
+    background: rgba(152, 11, 244, 0.95) !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    display: block !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(152, 11, 244, 0.5) !important;
+    outline: none !important;
+  }
+  
+  .navbar-toggler:hover {
+    background: rgba(152, 11, 244, 1) !important;
   }
   
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 24px !important;
+    height: 24px !important;
+    display: block !important;
+    pointer-events: none !important;
   }
   
   /* Menu mobile collapse */
   .navbar-collapse {
-    background: rgba(152, 11, 244, 0.95);
-    margin-top: 10px;
-    border-radius: 8px;
-    padding: 15px;
-    backdrop-filter: blur(10px);
+    background: rgba(152, 11, 244, 0.95) !important;
+    margin-top: 10px !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    backdrop-filter: blur(10px) !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9998 !important;
+    width: 100% !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease !important;
+  }
+  
+  .navbar-collapse.show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-height: 500px !important;
+    overflow: visible !important;
+  }
+  
+  .navbar-collapse.collapsing {
+    display: block !important;
+    visibility: visible !important;
   }
   
   /* Ajuste do padding para mobile */

@@ -20,7 +20,7 @@
       <a class="navbar-brand" href="#inicio" aria-label="Ir para o início"> 
         <img src="img/logo3.png" alt="Empreender 40+">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Alternar navegação">
+      <button class="navbar-toggler" type="button" aria-controls="menu" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
@@ -1195,6 +1195,92 @@
       duration: 800,
       once: true,
       offset: 100
+    });
+  </script>
+  
+  <!-- Fix para garantir funcionamento do menu mobile -->
+  <script>
+    // Desabilitar o Bootstrap collapse completamente
+    if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+      const originalCollapse = bootstrap.Collapse;
+      bootstrap.Collapse = function() {};
+      bootstrap.Collapse.prototype = originalCollapse.prototype;
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('=== MENU MOBILE (SEM BOOTSTRAP) ===');
+      
+      const toggleButton = document.querySelector('.navbar-toggler');
+      const menuCollapse = document.querySelector('#menu');
+      
+      if (toggleButton && menuCollapse) {
+        // Garantir que o menu começa fechado
+        menuCollapse.classList.remove('show');
+        menuCollapse.style.display = 'none';
+        
+        let lastToggleTime = 0;
+        const debounceDelay = 500; // 500ms entre cliques
+        
+        // Função para toggle do menu
+        function toggleMenu(e) {
+          const now = Date.now();
+          
+          // Verificar se passou tempo suficiente desde o último toggle
+          if (now - lastToggleTime < debounceDelay) {
+            console.log('⏱️ Clique muito rápido - ignorado');
+            if (e) {
+              e.preventDefault();
+              e.stopPropagation();
+              e.stopImmediatePropagation();
+            }
+            return false;
+          }
+          
+          lastToggleTime = now;
+          
+          console.log('🔘 TOGGLE em', new Date().toLocaleTimeString());
+          
+          if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+          }
+          
+          // Toggle manual
+          const isOpen = menuCollapse.classList.contains('show');
+          console.log('Estado atual:', isOpen ? '🟢 ABERTO' : '🔴 FECHADO');
+          
+          if (isOpen) {
+            menuCollapse.classList.remove('show');
+            menuCollapse.style.display = 'none';
+            toggleButton.setAttribute('aria-expanded', 'false');
+            console.log('→ Fechando menu...');
+          } else {
+            menuCollapse.classList.add('show');
+            menuCollapse.style.display = 'block';
+            toggleButton.setAttribute('aria-expanded', 'true');
+            console.log('→ Abrindo menu...');
+          }
+          
+          return false;
+        }
+        
+        // Adicionar evento apenas uma vez
+        toggleButton.addEventListener('click', toggleMenu, { capture: true, passive: false });
+        
+        // Fechar menu ao clicar em um link
+        const navLinks = menuCollapse.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            console.log('📍 Link clicado - fechando menu');
+            menuCollapse.classList.remove('show');
+            menuCollapse.style.display = 'none';
+            toggleButton.setAttribute('aria-expanded', 'false');
+          });
+        });
+        
+        console.log('✅ Menu mobile configurado (Bootstrap desabilitado)');
+      }
     });
   </script>
 </body>
