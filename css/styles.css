@@ -489,8 +489,9 @@ body.navbar-shrunk {
   padding: 40px;
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 20px;
 }
 
 .speakers-grid {
@@ -503,7 +504,7 @@ body.navbar-shrunk {
 /* PALESTRANTE EM DESTAQUE */
 .speaker-featured {
   position: absolute;
-  top: 50px;
+  top: 0;
   left: 50px;
   width: 200px;
   height: 250px;
@@ -563,11 +564,13 @@ body.navbar-shrunk {
 .speakers-small-grid {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   width: 180px;
+  max-height: 550px;
+  overflow: visible;
 }
 
 .speaker-small {
@@ -615,7 +618,7 @@ body.navbar-shrunk {
 /* PALESTRANTES EM CÍRCULO */
 .speakers-circle {
   position: absolute;
-  bottom: 50px;
+  bottom: 80px;
   left: 0;
   width: 300px;
   height: 200px;
@@ -722,7 +725,7 @@ body.navbar-shrunk {
 /* CONTADOR DE MAIS PALESTRANTES */
 .more-speakers {
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   right: 0;
   width: 100px;
   height: 100px;
