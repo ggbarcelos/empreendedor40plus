@@ -13,6 +13,14 @@
 </head>
 
 <body>
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Carregando Empreender 40+</div>
+    </div>
+  </div>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
@@ -95,42 +103,122 @@
         </div>
         
         <div class="col-lg-6" data-aos="fade-left">
-          <div class="community-hero-visual">
-            <div class="visual-card card-1">
-              <div class="card-icon">
-                <i class="bi bi-rocket-takeoff-fill"></i>
-              </div>
-              <div class="card-content">
-                <h4>Acelere</h4>
-                <p>Seu Crescimento</p>
+          <div class="community-hero-visual-enhanced">
+            <!-- Desktop Preview -->
+            <div class="platform-preview desktop-preview" data-aos="zoom-in" data-aos-delay="300">
+              <div class="device-frame desktop-frame">
+                <div class="device-screen">
+                  <div class="screen-header">
+                    <div class="header-nav">
+                      <div class="nav-logo">
+                        <img src="img/logo3.png" alt="Logo" class="mini-logo">
+                      </div>
+                      <div class="nav-menu">
+                        <div class="nav-item active">Dashboard</div>
+                        <div class="nav-item">Networking</div>
+                        <div class="nav-item">Eventos</div>
+                      </div>
+                      <div class="user-avatar">
+                        <div class="avatar-circle"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screen-content">
+                    <div class="dashboard-widgets">
+                      <div class="widget connections">
+                        <div class="widget-header">
+                          <i class="bi bi-people-fill"></i>
+                          <span>Conexões</span>
+                        </div>
+                        <div class="widget-value">247</div>
+                      </div>
+                      <div class="widget events">
+                        <div class="widget-header">
+                          <i class="bi bi-calendar-event"></i>
+                          <span>Eventos</span>
+                        </div>
+                        <div class="widget-value">12</div>
+                      </div>
+                    </div>
+                    <div class="activity-feed">
+                      <div class="feed-item">
+                        <div class="item-avatar"></div>
+                        <div class="item-content">
+                          <div class="item-title">Nova conexão</div>
+                          <div class="item-subtitle">João Silva aceitou sua solicitação</div>
+                        </div>
+                      </div>
+                      <div class="feed-item">
+                        <div class="item-avatar"></div>
+                        <div class="item-content">
+                          <div class="item-title">Evento próximo</div>
+                          <div class="item-subtitle">Workshop de Marketing Digital</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div class="visual-card card-2">
-              <div class="card-icon">
-                <i class="bi bi-people-fill"></i>
-              </div>
-              <div class="card-content">
-                <h4>Conecte</h4>
-                <p>Com Líderes</p>
+
+            <!-- Mobile Preview -->
+            <div class="platform-preview mobile-preview" data-aos="fade-up" data-aos-delay="500">
+              <div class="device-frame mobile-frame">
+                <div class="device-screen">
+                  <div class="mobile-header">
+                    <div class="status-bar">
+                      <div class="time">14:30</div>
+                      <div class="battery">
+                        <div class="battery-level"></div>
+                      </div>
+                    </div>
+                    <div class="app-header">
+                      <div class="app-title">Empreender 40+</div>
+                      <div class="notification-icon">
+                        <i class="bi bi-bell-fill"></i>
+                        <div class="notification-badge">3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mobile-content">
+                    <div class="mobile-widgets">
+                      <div class="mobile-widget">
+                        <i class="bi bi-rocket-takeoff-fill"></i>
+                        <span>Acelere</span>
+                      </div>
+                      <div class="mobile-widget">
+                        <i class="bi bi-people-fill"></i>
+                        <span>Conecte</span>
+                      </div>
+                      <div class="mobile-widget">
+                        <i class="bi bi-lightbulb-fill"></i>
+                        <span>Aprenda</span>
+                      </div>
+                    </div>
+                    <div class="mobile-feed">
+                      <div class="mobile-feed-item"></div>
+                      <div class="mobile-feed-item"></div>
+                      <div class="mobile-feed-item"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div class="visual-card card-3">
-              <div class="card-icon">
-                <i class="bi bi-lightbulb-fill"></i>
+
+            <!-- Floating Elements -->
+            <div class="floating-elements">
+              <div class="float-element element-1" data-aos="fade-up" data-aos-delay="700">
+                <i class="bi bi-chat-dots-fill"></i>
+                <span>Chat em tempo real</span>
               </div>
-              <div class="card-content">
-                <h4>Aprenda</h4>
-                <p>Sem Limites</p>
+              <div class="float-element element-2" data-aos="fade-up" data-aos-delay="900">
+                <i class="bi bi-trophy-fill"></i>
+                <span>Badges exclusivos</span>
               </div>
-            </div>
-            
-            <div class="central-illustration">
-              <div class="pulse-ring"></div>
-              <div class="pulse-ring delay-1"></div>
-              <div class="pulse-ring delay-2"></div>
-              <img src="img/logo3.png" alt="Empreender 40+" class="logo-central">
+              <div class="float-element element-3" data-aos="fade-up" data-aos-delay="1100">
+                <i class="bi bi-shield-check-fill"></i>
+                <span>100% Seguro</span>
+              </div>
             </div>
           </div>
         </div>
@@ -156,214 +244,758 @@
         </p>
       </div>
 
-      <div class="features-grid">
-        <!-- Feature 1 -->
-        <div class="feature-card-modern" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-icon-wrapper">
-            <div class="feature-icon gradient-1">
-              <i class="bi bi-people-fill"></i>
+      <div class="features-grid-enhanced">
+        <!-- Feature 1 - Networking -->
+        <div class="feature-card-glass" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-glow gradient-glow-1"></div>
+          <div class="feature-header">
+            <div class="feature-icon-modern icon-networking">
+              <div class="icon-bg"></div>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 20h5v-2a3 3 0 0 0-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 0 1 5.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 0 1 9.288 0M15 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM7 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <div class="feature-decoration"></div>
+            <div class="feature-badge">Conecte</div>
           </div>
           <h3>Networking Estratégico</h3>
           <p>Conecte-se com empreendedores da sua região ou área de atuação. Crie relacionamentos profissionais valiosos e duradouros.</p>
-          <ul class="feature-list">
-            <li><i class="bi bi-check-circle-fill"></i> Perfil profissional completo</li>
-            <li><i class="bi bi-check-circle-fill"></i> Matchmaking inteligente</li>
-            <li><i class="bi bi-check-circle-fill"></i> Chat e videochamadas</li>
-          </ul>
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Perfil profissional completo</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Matchmaking inteligente</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Chat e videochamadas</span>
+            </div>
+          </div>
+          <div class="feature-stats">
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Conexões</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="feature-card-modern" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-icon-wrapper">
-            <div class="feature-icon gradient-2">
-              <i class="bi bi-mortarboard-fill"></i>
+        <!-- Feature 2 - Conteúdo -->
+        <div class="feature-card-glass" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-glow gradient-glow-2"></div>
+          <div class="feature-header">
+            <div class="feature-icon-modern icon-content">
+              <div class="icon-bg"></div>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 7h8M8 11h8M8 15h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
             </div>
-            <div class="feature-decoration"></div>
+            <div class="feature-badge">Aprenda</div>
           </div>
           <h3>Conteúdo Exclusivo</h3>
           <p>Acesse webinars, cursos, e-books e materiais criados especialmente para empreendedores 40+. Aprenda com quem já trilhou o caminho.</p>
-          <ul class="feature-list">
-            <li><i class="bi bi-check-circle-fill"></i> Biblioteca de conteúdos</li>
-            <li><i class="bi bi-check-circle-fill"></i> Webinars ao vivo</li>
-            <li><i class="bi bi-check-circle-fill"></i> Certificados de conclusão</li>
-          </ul>
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Biblioteca de conteúdos</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Webinars ao vivo</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Certificados de conclusão</span>
+            </div>
+          </div>
+          <div class="feature-stats">
+            <div class="stat-item">
+              <div class="stat-number">200+</div>
+              <div class="stat-label">Materiais</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Feature 3 -->
-        <div class="feature-card-modern" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-icon-wrapper">
-            <div class="feature-icon gradient-3">
-              <i class="bi bi-briefcase-fill"></i>
+        <!-- Feature 3 - Oportunidades -->
+        <div class="feature-card-glass" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-glow gradient-glow-3"></div>
+          <div class="feature-header">
+            <div class="feature-icon-modern icon-business">
+              <div class="icon-bg"></div>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 7h-9M14 3v4M5 7h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 11v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 15h13M9 11h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
             </div>
-            <div class="feature-decoration"></div>
+            <div class="feature-badge">Oportunize</div>
           </div>
           <h3>Oportunidades de Negócios</h3>
           <p>Descubra parcerias estratégicas, encontre investidores e explore novas oportunidades de crescimento para seu empreendimento.</p>
-          <ul class="feature-list">
-            <li><i class="bi bi-check-circle-fill"></i> Mural de oportunidades</li>
-            <li><i class="bi bi-check-circle-fill"></i> Pitch para investidores</li>
-            <li><i class="bi bi-check-circle-fill"></i> Fóruns de discussão</li>
-          </ul>
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Mural de oportunidades</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Pitch para investidores</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Fóruns de discussão</span>
+            </div>
+          </div>
+          <div class="feature-stats">
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Parcerias</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Feature 4 -->
-        <div class="feature-card-modern" data-aos="fade-up" data-aos-delay="400">
-          <div class="feature-icon-wrapper">
-            <div class="feature-icon gradient-4">
-              <i class="bi bi-calendar-event-fill"></i>
+        <!-- Feature 4 - Eventos -->
+        <div class="feature-card-glass" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-glow gradient-glow-4"></div>
+          <div class="feature-header">
+            <div class="feature-icon-modern icon-events">
+              <div class="icon-bg"></div>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 16h6v2H9z" fill="currentColor"/>
+              </svg>
             </div>
-            <div class="feature-decoration"></div>
+            <div class="feature-badge">Participe</div>
           </div>
           <h3>Eventos e Encontros</h3>
           <p>Participe de eventos presenciais e virtuais, workshops e encontros regionais exclusivos para membros da comunidade.</p>
-          <ul class="feature-list">
-            <li><i class="bi bi-check-circle-fill"></i> Agenda de eventos</li>
-            <li><i class="bi bi-check-circle-fill"></i> Inscrições online</li>
-            <li><i class="bi bi-check-circle-fill"></i> Networking presencial</li>
-          </ul>
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Agenda de eventos</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Inscrições online</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Networking presencial</span>
+            </div>
+          </div>
+          <div class="feature-stats">
+            <div class="stat-item">
+              <div class="stat-number">24</div>
+              <div class="stat-label">Eventos/Ano</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Feature 5 -->
-        <div class="feature-card-modern" data-aos="fade-up" data-aos-delay="500">
-          <div class="feature-icon-wrapper">
-            <div class="feature-icon gradient-5">
-              <i class="bi bi-lightbulb-fill"></i>
+        <!-- Feature 5 - Mentoria -->
+        <div class="feature-card-glass" data-aos="fade-up" data-aos-delay="500">
+          <div class="card-glow gradient-glow-5"></div>
+          <div class="feature-header">
+            <div class="feature-icon-modern icon-mentoring">
+              <div class="icon-bg"></div>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 6v6l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <div class="feature-decoration"></div>
+            <div class="feature-badge">Mentoreie</div>
           </div>
           <h3>Mentoria e Consultoria</h3>
           <p>Conecte-se com mentores experientes que já superaram os desafios que você enfrenta. Ofereça ou receba consultoria especializada.</p>
-          <ul class="feature-list">
-            <li><i class="bi bi-check-circle-fill"></i> Rede de mentores</li>
-            <li><i class="bi bi-check-circle-fill"></i> Sessões 1:1</li>
-            <li><i class="bi bi-check-circle-fill"></i> Grupos de mastermind</li>
-          </ul>
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Rede de mentores</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Sessões 1:1</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Grupos de mastermind</span>
+            </div>
+          </div>
+          <div class="feature-stats">
+            <div class="stat-item">
+              <div class="stat-number">100+</div>
+              <div class="stat-label">Mentores</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Feature 6 -->
-        <div class="feature-card-modern" data-aos="fade-up" data-aos-delay="600">
-          <div class="feature-icon-wrapper">
-            <div class="feature-icon gradient-6">
-              <i class="bi bi-graph-up-arrow"></i>
+        <!-- Feature 6 - Ferramentas -->
+        <div class="feature-card-glass" data-aos="fade-up" data-aos-delay="600">
+          <div class="card-glow gradient-glow-6"></div>
+          <div class="feature-header">
+            <div class="feature-icon-modern icon-tools">
+              <div class="icon-bg"></div>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3v6h6M21 21v-6h-6M3 21l6-6M21 3l-6 6M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
             </div>
-            <div class="feature-decoration"></div>
+            <div class="feature-badge">Gerencie</div>
           </div>
           <h3>Ferramentas de Gestão</h3>
           <p>Utilize ferramentas práticas para planejar, acompanhar e fazer seu negócio crescer. Dashboards e relatórios personalizados.</p>
-          <ul class="feature-list">
-            <li><i class="bi bi-check-circle-fill"></i> Canvas de negócios</li>
-            <li><i class="bi bi-check-circle-fill"></i> Métricas e KPIs</li>
-            <li><i class="bi bi-check-circle-fill"></i> Planos de ação</li>
-          </ul>
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Canvas de negócios</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Métricas e KPIs</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">✓</div>
+              <span>Planos de ação</span>
+            </div>
+          </div>
+          <div class="feature-stats">
+            <div class="stat-item">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Ferramentas</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Gratuidade Destacada -->
-  <section class="community-free-section">
+  <!-- Timeline de Desenvolvimento -->
+  <section class="development-timeline-section">
     <div class="container">
-      <div class="free-banner" data-aos="zoom-in">
-        <div class="free-banner-bg">
-          <div class="float-icon float-1"><i class="bi bi-gift-fill"></i></div>
-          <div class="float-icon float-2"><i class="bi bi-star-fill"></i></div>
-          <div class="float-icon float-3"><i class="bi bi-heart-fill"></i></div>
+      <div class="section-header-modern text-center mb-5" data-aos="fade-up">
+        <div class="section-badge-modern">
+          <div class="badge-icon">
+            <i class="bi bi-gear-fill"></i>
+          </div>
+          <span>Progresso de Desenvolvimento</span>
+        </div>
+        <h2 class="section-title-modern">
+          Acompanhe Nossa <span class="gradient-text">Evolução</span>
+        </h2>
+        <p class="section-subtitle-modern">
+          Transparência total sobre o desenvolvimento da plataforma e marcos importantes
+        </p>
+      </div>
+
+      <div class="timeline-container" data-aos="fade-up" data-aos-delay="200">
+        <!-- Progress Overview -->
+        <div class="progress-overview">
+          <div class="overall-progress">
+            <div class="progress-header">
+              <h3>Progresso Geral da Plataforma</h3>
+              <div class="progress-percentage">78%</div>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" data-progress="78">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+            <p class="progress-subtitle">Previsão de lançamento: <strong>Dezembro 2025</strong></p>
+          </div>
+        </div>
+
+        <!-- Timeline Items -->
+        <div class="timeline-track">
+          <!-- Marco 1 - Concluído -->
+          <div class="timeline-item completed" data-aos="fade-right" data-aos-delay="300">
+            <div class="timeline-marker">
+              <div class="marker-icon">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Pesquisa e Planejamento</h4>
+                <div class="timeline-status completed">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Concluído</span>
+                </div>
+              </div>
+              <div class="timeline-date">Janeiro - Março 2025</div>
+              <p>Pesquisa de mercado, definição de funcionalidades e arquitetura da plataforma baseada nas necessidades reais dos empreendedores 40+.</p>
+              <div class="timeline-features">
+                <div class="feature-completed">✓ Pesquisa de mercado realizada</div>
+                <div class="feature-completed">✓ Funcionalidades definidas</div>
+                <div class="feature-completed">✓ Planejamento concluído</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Marco 2 - Concluído -->
+          <div class="timeline-item completed" data-aos="fade-left" data-aos-delay="400">
+            <div class="timeline-marker">
+              <div class="marker-icon">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Design e Prototipação</h4>
+                <div class="timeline-status completed">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Concluído</span>
+                </div>
+              </div>
+              <div class="timeline-date">Abril - Junho 2025</div>
+              <p>Criação da identidade visual, wireframes e protótipos interativos focados na usabilidade para o público 40+.</p>
+              <div class="timeline-features">
+                <div class="feature-completed">✓ Visual da plataforma criado</div>
+                <div class="feature-completed">✓ Protótipos desenvolvidos</div>
+                <div class="feature-completed">✓ Interface aprovada</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Marco 3 - Em Progresso -->
+          <div class="timeline-item active" data-aos="fade-right" data-aos-delay="500">
+            <div class="timeline-marker">
+              <div class="marker-icon">
+                <i class="bi bi-gear-fill"></i>
+              </div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Desenvolvimento da Plataforma</h4>
+                <div class="timeline-status active">
+                  <div class="loading-spinner"></div>
+                  <span>Em Desenvolvimento</span>
+                </div>
+              </div>
+              <div class="timeline-date">Julho - Outubro 2025</div>
+              <p>Desenvolvimento completo da plataforma, incluindo todas as funcionalidades de networking, conteúdo e eventos para empreendedores.</p>
+              <div class="timeline-features">
+                <div class="feature-completed">✓ Sistema de cadastro</div>
+                <div class="feature-completed">✓ Área de membros</div>
+                <div class="feature-progress">⚡ Sistema de networking (78% concluído)</div>
+                <div class="feature-pending">○ Área de eventos</div>
+                <div class="feature-pending">○ Biblioteca de conteúdo</div>
+              </div>
+              <div class="timeline-progress">
+                <div class="progress-mini">
+                  <div class="progress-mini-fill" style="width: 78%"></div>
+                </div>
+                <span>78% concluído</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Marco 4 - Próximo -->
+          <div class="timeline-item upcoming" data-aos="fade-left" data-aos-delay="600">
+            <div class="timeline-marker">
+              <div class="marker-icon">
+                <i class="bi bi-display"></i>
+              </div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Finalização e Testes</h4>
+                <div class="timeline-status upcoming">
+                  <i class="bi bi-clock-fill"></i>
+                  <span>Próximo</span>
+                </div>
+              </div>
+              <div class="timeline-date">Outubro - Novembro 2025</div>
+              <p>Finalização da plataforma, testes finais e preparação para o lançamento oficial com todos os recursos funcionais.</p>
+              <div class="timeline-features">
+                <div class="feature-pending">○ Testes da plataforma</div>
+                <div class="feature-pending">○ Ajustes finais</div>
+                <div class="feature-pending">○ Treinamento da equipe</div>
+                <div class="feature-pending">○ Preparação do lançamento</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Marco 5 - Futuro -->
+          <div class="timeline-item future" data-aos="fade-right" data-aos-delay="700">
+            <div class="timeline-marker">
+              <div class="marker-icon">
+                <i class="bi bi-bug-fill"></i>
+              </div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Testes e Beta</h4>
+                <div class="timeline-status future">
+                  <i class="bi bi-hourglass-split"></i>
+                  <span>Planejado</span>
+                </div>
+              </div>
+              <div class="timeline-date">Novembro - Dezembro 2025</div>
+              <p>Testes extensivos com grupo seleto de beta testers, correções e otimizações finais antes do lançamento oficial.</p>
+              <div class="timeline-features">
+                <div class="feature-pending">○ Testes com usuários</div>
+                <div class="feature-pending">○ Correções e melhorias</div>
+                <div class="feature-pending">○ Preparação final</div>
+                <div class="feature-pending">○ Documentação</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Marco 6 - Lançamento -->
+          <div class="timeline-item launch" data-aos="fade-left" data-aos-delay="800">
+            <div class="timeline-marker">
+              <div class="marker-icon">
+                <i class="bi bi-rocket-takeoff-fill"></i>
+              </div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Lançamento Oficial</h4>
+                <div class="timeline-status launch">
+                  <i class="bi bi-star-fill"></i>
+                  <span>Lançamento</span>
+                </div>
+              </div>
+              <div class="timeline-date">Dezembro 2025</div>
+              <p>Lançamento oficial da plataforma para todos os membros cadastrados, com acesso completo a todas as funcionalidades.</p>
+              <div class="timeline-features">
+                <div class="feature-highlight">🚀 Acesso total liberado</div>
+                <div class="feature-highlight">🎉 Evento de lançamento</div>
+                <div class="feature-highlight">🏆 Benefícios para membros fundadores</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparação de Valor -->
+  <section class="value-comparison-section">
+    <div class="container">
+      <div class="section-header-modern text-center mb-5" data-aos="fade-up">
+        <div class="section-badge-modern">
+          <div class="badge-icon">
+            <i class="bi bi-gift-fill"></i>
+          </div>
+          <span>Por Que Escolher Nossa Plataforma?</span>
+        </div>
+        <h2 class="section-title-modern">
+          <span class="gradient-text">100% Gratuita</span> vs Outras Plataformas
+        </h2>
+        <p class="section-subtitle-modern">
+          Compare nossos recursos com outras plataformas de networking e veja por que somos diferentes
+        </p>
+      </div>
+
+      <!-- Comparação Visual -->
+      <div class="comparison-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="comparison-grid">
+          <!-- Coluna Outras Plataformas -->
+          <div class="comparison-column others-column">
+            <div class="column-header others-header">
+              <div class="column-icon">
+                <i class="bi bi-credit-card-fill"></i>
+              </div>
+              <h3>Outras Plataformas</h3>
+              <div class="price-tag others-price">
+                <span class="price">R$ 97-297</span>
+                <span class="period">/mês</span>
+              </div>
+            </div>
+            
+            <div class="features-list">
+              <div class="feature-item limited">
+                <i class="bi bi-x-circle-fill"></i>
+                <span>Recursos limitados</span>
+              </div>
+              <div class="feature-item limited">
+                <i class="bi bi-x-circle-fill"></i>
+                <span>Taxa de conexão</span>
+              </div>
+              <div class="feature-item limited">
+                <i class="bi bi-x-circle-fill"></i>
+                <span>Conteúdo básico</span>
+              </div>
+              <div class="feature-item limited">
+                <i class="bi bi-x-circle-fill"></i>
+                <span>Suporte limitado</span>
+              </div>
+              <div class="feature-item limited">
+                <i class="bi bi-x-circle-fill"></i>
+                <span>Sem eventos exclusivos</span>
+              </div>
+              <div class="feature-item limited">
+                <i class="bi bi-x-circle-fill"></i>
+                <span>Foco genérico</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divisor VS -->
+          <div class="vs-divider" data-aos="zoom-in" data-aos-delay="400">
+            <div class="vs-circle">
+              <span>VS</span>
+            </div>
+          </div>
+
+          <!-- Coluna Nossa Plataforma -->
+          <div class="comparison-column our-column">
+            <div class="column-header our-header">
+              <div class="column-icon">
+                <i class="bi bi-gift-fill"></i>
+              </div>
+              <h3>Empreender 40+</h3>
+              <div class="price-tag our-price">
+                <span class="price">R$ 0</span>
+                <span class="period">Para Sempre</span>
+              </div>
+              <div class="guarantee-badge">
+                <i class="bi bi-shield-check-fill"></i>
+                <span>Garantia Vitalícia</span>
+              </div>
+            </div>
+            
+            <div class="features-list">
+              <div class="feature-item included">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Todos os recursos liberados</span>
+              </div>
+              <div class="feature-item included">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Conexões ilimitadas</span>
+              </div>
+              <div class="feature-item included">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Conteúdo premium exclusivo</span>
+              </div>
+              <div class="feature-item included">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Suporte prioritário</span>
+              </div>
+              <div class="feature-item included">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Eventos presenciais</span>
+              </div>
+              <div class="feature-item included">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Foco em 40+ anos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Economia -->
+        <div class="savings-highlight" data-aos="fade-up" data-aos-delay="600">
+          <div class="savings-content">
+            <div class="savings-icon">
+              <i class="bi bi-piggy-bank-fill"></i>
+            </div>
+            <div class="savings-text">
+              <h4>Sua Economia Anual</h4>
+              <p>Economize até <strong class="savings-amount">R$ 3.564</strong> por ano escolhendo nossa plataforma gratuita</p>
+            </div>
+            <div class="savings-visual">
+              <div class="money-saved">
+                <span class="currency">R$</span>
+                <span class="amount">3.564</span>
+                <span class="period">salvos/ano</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selo de Garantia Premium -->
+      <div class="premium-guarantee" data-aos="zoom-in" data-aos-delay="800">
+        <div class="guarantee-seal">
+          <div class="seal-content">
+            <div class="seal-icon">
+              <i class="bi bi-award-fill"></i>
+            </div>
+            <div class="seal-text">
+              <h4>100% Gratuito</h4>
+              <p>Garantia Vitalícia</p>
+            </div>
+          </div>
+          <div class="seal-ribbon">
+            <span>Sem Pegadinhas</span>
+          </div>
         </div>
         
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <div class="free-content">
-              <div class="free-badge">
-                <i class="bi bi-gift-fill me-2"></i>
-                Totalmente Gratuito
-              </div>
-              <h2 class="free-title">Acesso 100% Gratuito Para Sempre</h2>
-              <p class="free-text">
-                Acreditamos que conhecimento, conexões e oportunidades devem ser acessíveis a todos os empreendedores. 
-                Por isso, nossa plataforma será <strong>completamente gratuita</strong>, sem taxas ocultas ou planos pagos.
-              </p>
-              <div class="free-features">
-                <div class="free-feature-item">
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span>Todos os recursos liberados</span>
-                </div>
-                <div class="free-feature-item">
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span>Sem limite de conexões</span>
-                </div>
-                <div class="free-feature-item">
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span>Conteúdo premium incluído</span>
-                </div>
-              </div>
-            </div>
+        <div class="guarantee-features">
+          <div class="guarantee-item">
+            <i class="bi bi-check-lg"></i>
+            <span>Sem cartão de crédito</span>
           </div>
-          <div class="col-lg-4 text-center">
-            <div class="free-visual">
-              <div class="price-tag">
-                <div class="price-amount">R$ 0</div>
-                <div class="price-period">Para Sempre</div>
-              </div>
-            </div>
+          <div class="guarantee-item">
+            <i class="bi bi-check-lg"></i>
+            <span>Sem taxas ocultas</span>
+          </div>
+          <div class="guarantee-item">
+            <i class="bi bi-check-lg"></i>
+            <span>Sem upgrade forçado</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action Final -->
+  <!-- Call to Action Aprimorado -->
   <section class="community-cta-section" id="notify">
     <div class="container">
-      <div class="cta-card" data-aos="fade-up">
+      <!-- Contador de Interessados -->
+      <div class="interest-counter" data-aos="fade-down">
+        <div class="counter-content">
+          <div class="counter-icon">
+            <i class="bi bi-people-fill"></i>
+          </div>
+          <div class="counter-stats">
+            <div class="counter-number" id="interessados">2.847</div>
+            <div class="counter-label">pessoas já demonstraram interesse</div>
+          </div>
+          <div class="counter-trend">
+            <i class="bi bi-graph-up-arrow"></i>
+            <span>+127 hoje</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-card-enhanced" data-aos="fade-up">
         <div class="cta-content">
-          <h2 class="cta-title">Seja um dos Primeiros</h2>
+          <h2 class="cta-title">Garantir Meu Acesso Gratuito</h2>
           <p class="cta-subtitle">
-            Cadastre-se agora e receba em primeira mão as novidades sobre o lançamento da plataforma. 
-            Vagas limitadas para os membros fundadores!
+            Seja um dos primeiros a acessar a plataforma mais completa para empreendedores 40+. 
+            <strong>Vagas limitadas para membros fundadores!</strong>
           </p>
           
-          <div class="cta-benefits">
-            <div class="benefit-item">
-              <div class="benefit-icon">
-                <i class="bi bi-star-fill"></i>
+          <!-- Formulário Inline -->
+          <div class="signup-form-container">
+            <form class="signup-form" id="signupForm">
+              <div class="form-header">
+                <h3>Cadastro Rápido - 30 segundos</h3>
+                <p>Preencha os dados abaixo para garantir seu acesso gratuito</p>
               </div>
-              <div class="benefit-text">
-                <strong>Acesso Antecipado</strong>
-                <span>Entre antes do lançamento oficial</span>
+              
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="nome">Nome Completo</label>
+                  <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                  <div class="form-icon">
+                    <i class="bi bi-person-fill"></i>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                  <div class="form-icon">
+                    <i class="bi bi-envelope-fill"></i>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="telefone">WhatsApp</label>
+                  <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+                  <div class="form-icon">
+                    <i class="bi bi-whatsapp"></i>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="area">Área de Atuação</label>
+                  <select id="area" name="area" required>
+                    <option value="">Selecione sua área</option>
+                    <option value="consultoria">Consultoria</option>
+                    <option value="comercio">Comércio</option>
+                    <option value="servicos">Serviços</option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="saude">Saúde</option>
+                    <option value="educacao">Educação</option>
+                    <option value="outros">Outros</option>
+                  </select>
+                  <div class="form-icon">
+                    <i class="bi bi-briefcase-fill"></i>
+                  </div>
+                </div>
               </div>
-            </div>
+              
+              <div class="form-benefits">
+                <div class="benefit-check">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Acesso antecipado à plataforma</span>
+                </div>
+                <div class="benefit-check">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Badge exclusivo de membro fundador</span>
+                </div>
+                <div class="benefit-check">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Convites para eventos VIP</span>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn-signup">
+                <div class="btn-content">
+                  <i class="bi bi-rocket-takeoff-fill"></i>
+                  <span>Garantir Acesso Gratuito</span>
+                </div>
+                <div class="btn-loading" style="display: none;">
+                  <div class="spinner"></div>
+                  <span>Processando...</span>
+                </div>
+              </button>
+              
+              <div class="form-security">
+                <i class="bi bi-shield-check-fill"></i>
+                <span>Seus dados estão seguros conosco. Não enviamos spam.</span>
+              </div>
+            </form>
             
-            <div class="benefit-item">
-              <div class="benefit-icon">
-                <i class="bi bi-award-fill"></i>
+            <!-- Mensagem de Sucesso -->
+            <div class="success-message" id="successMessage" style="display: none;">
+              <div class="success-icon">
+                <i class="bi bi-check-circle-fill"></i>
               </div>
-              <div class="benefit-text">
-                <strong>Badge Exclusivo</strong>
-                <span>Membro fundador da comunidade</span>
+              <h3>Parabéns! Você está na lista VIP</h3>
+              <p>Você receberá todas as novidades sobre o lançamento da plataforma em primeira mão.</p>
+              <div class="success-benefits">
+                <div class="success-badge">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Membro Fundador #<span id="memberNumber">2848</span></span>
+                </div>
               </div>
-            </div>
-            
-            <div class="benefit-item">
-              <div class="benefit-icon">
-                <i class="bi bi-bell-fill"></i>
-              </div>
-              <div class="benefit-text">
-                <strong>Notificações VIP</strong>
-                <span>Updates exclusivos por e-mail</span>
-              </div>
+              <a href="index.html" class="btn-back">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+                Voltar ao Site Principal
+              </a>
             </div>
           </div>
           
-          <div class="cta-buttons">
-            <a href="index.html#inscricao" class="btn-cta-primary">
-              <i class="bi bi-envelope-plus-fill me-2"></i>
-              Quero Ser Notificado
-            </a>
-            <a href="index.html" class="btn-cta-secondary">
-              Voltar ao Site
-            </a>
+          <!-- Social Proof -->
+          <div class="social-proof">
+            <div class="proof-avatars">
+              <div class="avatar-stack">
+                <div class="avatar"></div>
+                <div class="avatar"></div>
+                <div class="avatar"></div>
+                <div class="avatar"></div>
+                <div class="avatar-more">+2.8k</div>
+              </div>
+            </div>
+            <div class="proof-text">
+              <strong>Junte-se a mais de 2.800 empreendedores</strong>
+              <span>que já garantiram seu acesso gratuito</span>
+            </div>
           </div>
         </div>
         
@@ -376,82 +1008,163 @@
     </div>
   </section>
 
-  <!-- Footer Moderno -->
-  <footer class="modern-footer">
-    <div class="footer-bg-gradient"></div>
+  <!-- Footer Moderno e Aprimorado -->
+  <footer class="enhanced-footer">
+    <div class="footer-bg-wrapper">
+      <div class="footer-gradient"></div>
+      <div class="footer-pattern"></div>
+    </div>
     
     <div class="container">
+      <!-- Newsletter Section -->
+      <div class="footer-newsletter" data-aos="fade-up">
+        <div class="newsletter-content">
+          <div class="newsletter-header">
+            <h3>Fique por Dentro das Novidades</h3>
+            <p>Receba atualizações exclusivas sobre o desenvolvimento da plataforma e dicas para empreendedores 40+</p>
+          </div>
+          <div class="newsletter-form">
+            <div class="form-input-group">
+              <input type="email" placeholder="Seu melhor e-mail" class="newsletter-input">
+              <button class="newsletter-btn">
+                <i class="bi bi-send-fill"></i>
+                <span>Inscrever-se</span>
+              </button>
+            </div>
+            <div class="newsletter-privacy">
+              <i class="bi bi-shield-check-fill"></i>
+              <span>Seus dados estão seguros. Sem spam, apenas conteúdo relevante.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Seção Principal do Footer -->
       <div class="footer-main">
         <div class="row g-4">
-          <!-- Coluna 1: Logo e Descrição -->
+          <!-- Coluna 1: Logo e Missão -->
           <div class="col-lg-4 col-md-6">
             <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
               <img src="img/logo3.png" alt="Empreender 40+" class="footer-logo">
-              <p class="footer-description">
-                Transformando experiência em oportunidade. O maior evento de empreendedorismo maduro do Brasil.
+              <h4 class="footer-mission-title">Nossa Missão</h4>
+              <p class="footer-mission">
+                Conectar e empoderar empreendedores com mais de 40 anos, oferecendo uma plataforma completa e gratuita para networking, aprendizado e crescimento profissional.
               </p>
+              
+              <!-- Redes Sociais -->
               <div class="footer-social">
-                <a href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank" rel="noopener" class="social-icon">
-                  <i class="bi bi-youtube"></i>
-                </a>
-                <a href="https://www.instagram.com/empreender_40mais/" target="_blank" rel="noopener" class="social-icon">
-                  <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://wa.me/5551991086971" target="_blank" rel="noopener" class="social-icon">
-                  <i class="bi bi-whatsapp"></i>
-                </a>
+                <h5>Siga-nos</h5>
+                <div class="social-links">
+                  <a href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank" rel="noopener" class="social-link youtube">
+                    <i class="bi bi-youtube"></i>
+                    <span>YouTube</span>
+                  </a>
+                  <a href="https://www.instagram.com/empreender_40mais/" target="_blank" rel="noopener" class="social-link instagram">
+                    <i class="bi bi-instagram"></i>
+                    <span>Instagram</span>
+                  </a>
+                  <a href="https://wa.me/5551991086971" target="_blank" rel="noopener" class="social-link whatsapp">
+                    <i class="bi bi-whatsapp"></i>
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
           
-          <!-- Coluna 2: Links Rápidos -->
+          <!-- Coluna 2: Navegação -->
           <div class="col-lg-2 col-md-6">
             <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
               <h4 class="footer-title">Navegação</h4>
               <ul class="footer-menu">
-                <li><a href="index.html#inicio"><i class="bi bi-chevron-right"></i> Início</a></li>
-                <li><a href="index.html#sobre"><i class="bi bi-chevron-right"></i> Sobre</a></li>
-                <li><a href="index.html#palestrantes"><i class="bi bi-chevron-right"></i> Palestrantes</a></li>
-                <li><a href="index.html#local"><i class="bi bi-chevron-right"></i> Local</a></li>
-                <li><a href="index.html#inscricao"><i class="bi bi-chevron-right"></i> Inscreva-se</a></li>
+                <li><a href="index.html#inicio"><i class="bi bi-house-fill"></i> Início</a></li>
+                <li><a href="index.html#sobre"><i class="bi bi-info-circle-fill"></i> Sobre</a></li>
+                <li><a href="index.html#palestrantes"><i class="bi bi-people-fill"></i> Palestrantes</a></li>
+                <li><a href="index.html#local"><i class="bi bi-geo-alt-fill"></i> Local</a></li>
+                <li><a href="index.html#inscricao"><i class="bi bi-ticket-perforated-fill"></i> Inscreva-se</a></li>
+                <li><a href="comunidade.html"><i class="bi bi-chat-dots-fill"></i> Comunidade</a></li>
               </ul>
             </div>
           </div>
           
-          <!-- Coluna 3: Recursos -->
+          <!-- Coluna 3: Recursos da Comunidade -->
           <div class="col-lg-3 col-md-6">
             <div class="footer-links" data-aos="fade-up" data-aos-delay="300">
-              <h4 class="footer-title">Recursos</h4>
+              <h4 class="footer-title">Comunidade 40+</h4>
               <ul class="footer-menu">
-                <li><a href="comunidade.html"><i class="bi bi-chevron-right"></i> Comunidade</a></li>
-                <li><a href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank"><i class="bi bi-chevron-right"></i> YouTube</a></li>
-                <li><a href="index.html#inscricao"><i class="bi bi-chevron-right"></i> Ingressos</a></li>
-                <li><a href="index.html#palestrantes"><i class="bi bi-chevron-right"></i> Programação</a></li>
+                <li><a href="#features"><i class="bi bi-rocket-takeoff-fill"></i> Recursos da Plataforma</a></li>
+                <li><a href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank"><i class="bi bi-youtube"></i> Canal no YouTube</a></li>
+                <li><a href="#notify"><i class="bi bi-bell-fill"></i> Lista de Espera VIP</a></li>
+                <li><a href="index.html#palestrantes"><i class="bi bi-calendar-event-fill"></i> Próximos Eventos</a></li>
+                <li><a href="#timeline"><i class="bi bi-clock-history"></i> Progresso da Plataforma</a></li>
               </ul>
+              
+              <!-- Stats da Comunidade -->
+              <div class="community-stats">
+                <h5>Nossa Comunidade</h5>
+                <div class="stats-grid">
+                  <div class="stat-item">
+                    <div class="stat-number">2.8k+</div>
+                    <div class="stat-label">Interessados</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Idade Média</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Estados</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Gratuito</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           
-          <!-- Coluna 4: Contato -->
+          <!-- Coluna 4: Contato e Evento -->
           <div class="col-lg-3 col-md-6">
             <div class="footer-contact" data-aos="fade-up" data-aos-delay="400">
-              <h4 class="footer-title">Contato</h4>
+              <h4 class="footer-title">Próximo Evento</h4>
+              
+              <!-- Card do Evento -->
+              <div class="event-card">
+                <div class="event-date">
+                  <div class="event-day">29</div>
+                  <div class="event-month">OUT</div>
+                </div>
+                <div class="event-info">
+                  <h5>Empreender 40+ Summit</h5>
+                  <p>Teatro Bourbon Country<br>Porto Alegre, RS</p>
+                  <span class="event-time">9:30h às 18:30h</span>
+                </div>
+              </div>
+              
+              <!-- Informações de Contato -->
+              <h5 class="contact-title">Fale Conosco</h5>
               <ul class="contact-info">
                 <li>
-                  <i class="bi bi-geo-alt-fill"></i>
-                  <span>Teatro Bourbon Country<br>Porto Alegre, RS</span>
-                </li>
-                <li>
-                  <i class="bi bi-calendar-event-fill"></i>
-                  <span>29 de Outubro, 2024<br>8h às 18h</span>
-                </li>
-                <li>
                   <i class="bi bi-envelope-fill"></i>
-                  <a href="mailto:contato@empreender40mais.com">contato@empreender40mais.com</a>
+                  <div>
+                    <strong>E-mail</strong>
+                    <a href="mailto:contato@empreender40mais.com">contato@empreender40mais.com</a>
+                  </div>
                 </li>
                 <li>
                   <i class="bi bi-whatsapp"></i>
-                  <a href="https://wa.me/5551991086971" target="_blank">(51) 99108-6971</a>
+                  <div>
+                    <strong>WhatsApp</strong>
+                    <a href="https://wa.me/5551991086971" target="_blank">(51) 99108-6971</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-globe"></i>
+                  <div>
+                    <strong>Website</strong>
+                    <a href="https://www.empreender40mais.com" target="_blank">empreender40mais.com</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -467,7 +1180,7 @@
         <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-start">
             <p class="footer-copyright">
-              &copy; 2025 <strong>Empreender 40+</strong>. Todos os direitos reservados.
+              &copy; 2025 <strong>Empreender 40+</strong>. Feito com <i class="bi bi-heart-fill text-danger"></i> para empreendedores maduros.
             </p>
           </div>
           <div class="col-md-6 text-center text-md-end">
@@ -476,7 +1189,7 @@
               <span class="separator">•</span>
               <a href="#" class="footer-link-inline">Termos de Uso</a>
               <span class="separator">•</span>
-              <a href="https://www.empreender40mais.com" target="_blank" class="footer-link-inline">www.empreender40mais.com</a>
+              <a href="#" class="footer-link-inline">Código de Conduta</a>
             </div>
           </div>
         </div>
@@ -487,6 +1200,11 @@
         <div class="decoration-shape shape-1"></div>
         <div class="decoration-shape shape-2"></div>
         <div class="decoration-shape shape-3"></div>
+        <div class="floating-icons">
+          <i class="bi bi-rocket-takeoff-fill icon-1"></i>
+          <i class="bi bi-people-fill icon-2"></i>
+          <i class="bi bi-lightbulb-fill icon-3"></i>
+        </div>
       </div>
     </div>
   </footer>
@@ -495,12 +1213,351 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/navbar.js"></script>
+  
+  <!-- Enhanced Form Functionality -->
   <script>
+    // Page Loader
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('pageLoader');
+      if (loader) {
+        setTimeout(() => {
+          loader.classList.add('hidden');
+          setTimeout(() => {
+            loader.style.display = 'none';
+          }, 500);
+        }, 800);
+      }
+    });
+
+    // Newsletter Subscription
+    document.addEventListener('DOMContentLoaded', function() {
+      const newsletterBtn = document.querySelector('.newsletter-btn');
+      const newsletterInput = document.querySelector('.newsletter-input');
+      
+      if (newsletterBtn && newsletterInput) {
+        newsletterBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const email = newsletterInput.value.trim();
+          
+          if (!email) {
+            alert('Por favor, insira seu e-mail.');
+            return;
+          }
+          
+          if (!isValidEmail(email)) {
+            alert('Por favor, insira um e-mail válido.');
+            return;
+          }
+          
+          // Simula envio
+          newsletterBtn.innerHTML = '<i class="bi bi-check-circle-fill"></i><span>Inscrito!</span>';
+          newsletterBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+          
+          setTimeout(() => {
+            newsletterBtn.innerHTML = '<i class="bi bi-send-fill"></i><span>Inscrever-se</span>';
+            newsletterBtn.style.background = 'linear-gradient(135deg, #0ea5e9, #0284c7)';
+            newsletterInput.value = '';
+          }, 3000);
+        });
+      }
+      
+      // Validação de email
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+    });
+
+    // Inicializar AOS com configurações aprimoradas
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
-      once: true
+      once: true,
+      offset: 100,
+      delay: 100
     });
+
+    // Intersection Observer para performance
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '50px'
+    };
+
+    // Contador animado de interessados
+    function animateCounter() {
+      const counter = document.getElementById('interessados');
+      if (!counter) return;
+      
+      const target = 2847;
+      const duration = 2000;
+      const increment = target / (duration / 16);
+      let current = 2500;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        counter.textContent = Math.floor(current).toLocaleString('pt-BR');
+      }, 16);
+    }
+
+    // Funcionalidade aprimorada do formulário
+    const signupForm = document.getElementById('signupForm');
+    if (signupForm) {
+      signupForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const form = this;
+        const submitBtn = form.querySelector('.btn-signup');
+        const btnContent = submitBtn.querySelector('.btn-content');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
+        const successMessage = document.getElementById('successMessage');
+        
+        // Validação avançada
+        const nome = form.nome.value.trim();
+        const email = form.email.value.trim();
+        const telefone = form.telefone.value.trim();
+        const area = form.area.value;
+        
+        // Validações
+        if (!nome || nome.length < 2) {
+          showNotification('Por favor, insira um nome válido.', 'error');
+          return;
+        }
+        
+        if (!email || !isValidEmail(email)) {
+          showNotification('Por favor, insira um e-mail válido.', 'error');
+          return;
+        }
+        
+        if (!telefone || telefone.length < 14) {
+          showNotification('Por favor, insira um telefone válido.', 'error');
+          return;
+        }
+        
+        if (!area) {
+          showNotification('Por favor, selecione sua área de atuação.', 'error');
+          return;
+        }
+        
+        // Mostrar loading com animação
+        submitBtn.disabled = true;
+        btnContent.style.display = 'none';
+        btnLoading.style.display = 'flex';
+        
+        // Simular envio (substitua por integração real)
+        setTimeout(() => {
+          // Sucesso
+          form.style.display = 'none';
+          successMessage.style.display = 'block';
+          
+          // Scroll suave para a mensagem de sucesso
+          successMessage.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+          });
+          
+          // Atualizar número do membro
+          const memberNumber = document.getElementById('memberNumber');
+          if (memberNumber) {
+            memberNumber.textContent = Math.floor(Math.random() * 100) + 2848;
+          }
+          
+          // Atualizar contador
+          updateCounter();
+          
+          // Confetti effect (opcional)
+          createConfetti();
+          
+          // Analytics tracking
+          trackConversion(nome, email, area);
+          
+        }, 2000);
+      });
+    }
+
+    // Funções auxiliares
+    function isValidEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+
+    function showNotification(message, type = 'info') {
+      // Criar notificação toast
+      const notification = document.createElement('div');
+      notification.className = `notification ${type}`;
+      notification.textContent = message;
+      notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${type === 'error' ? '#ef4444' : '#22c55e'};
+        color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        z-index: 10000;
+        font-weight: 600;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      `;
+      
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+      }, 100);
+      
+      setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 300);
+      }, 3000);
+    }
+
+    function updateCounter() {
+      const interessadosCounter = document.getElementById('interessados');
+      if (interessadosCounter) {
+        const currentCount = parseInt(interessadosCounter.textContent.replace(/\./g, ''));
+        interessadosCounter.textContent = (currentCount + 1).toLocaleString('pt-BR');
+      }
+    }
+
+    function createConfetti() {
+      // Simples efeito de confetti
+      const colors = ['#980BF4', '#0F64F7', '#2BC8EA', '#22c55e', '#f59e0b'];
+      
+      for (let i = 0; i < 50; i++) {
+        setTimeout(() => {
+          const confetti = document.createElement('div');
+          confetti.style.cssText = `
+            position: fixed;
+            top: -10px;
+            left: ${Math.random() * 100}%;
+            width: 10px;
+            height: 10px;
+            background: ${colors[Math.floor(Math.random() * colors.length)]};
+            z-index: 10000;
+            pointer-events: none;
+            border-radius: 50%;
+            animation: confettiFall 3s ease-out forwards;
+          `;
+          
+          document.body.appendChild(confetti);
+          
+          setTimeout(() => {
+            document.body.removeChild(confetti);
+          }, 3000);
+        }, i * 50);
+      }
+    }
+
+    function trackConversion(nome, email, area) {
+      // Integração com analytics
+      console.log('Conversão registrada:', { nome, email, area, timestamp: new Date() });
+      
+      // Google Analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+          event_category: 'engagement',
+          event_label: 'community_signup',
+          value: 1
+        });
+      }
+      
+      // Facebook Pixel
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {
+          content_name: 'Community Signup',
+          content_category: area
+        });
+      }
+    }
+
+    // Animação da timeline
+    function animateTimelineProgress() {
+      const progressBar = document.querySelector('[data-progress]');
+      if (!progressBar) return;
+      
+      const progressFill = progressBar.querySelector('.progress-fill');
+      const targetProgress = progressBar.getAttribute('data-progress');
+      
+      setTimeout(() => {
+        progressFill.style.width = targetProgress + '%';
+      }, 500);
+    }
+
+    // Observers para performance
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateTimelineProgress();
+          timelineObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter();
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Inicializar observers
+    document.addEventListener('DOMContentLoaded', function() {
+      const timelineElement = document.querySelector('.progress-overview');
+      const counterElement = document.querySelector('.interest-counter');
+      
+      if (timelineElement) {
+        timelineObserver.observe(timelineElement);
+      }
+      
+      if (counterElement) {
+        counterObserver.observe(counterElement);
+      }
+    });
+
+    // Máscara para telefone aprimorada
+    const telefoneInput = document.getElementById('telefone');
+    if (telefoneInput) {
+      telefoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        
+        if (value.length >= 11) {
+          value = value.replace(/^(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+        } else if (value.length >= 7) {
+          value = value.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+        } else if (value.length >= 3) {
+          value = value.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+        } else if (value.length >= 1) {
+          value = value.replace(/^(\d{0,2})/, '($1');
+        }
+        
+        e.target.value = value;
+      });
+    }
+
+    // CSS de animação do confetti
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes confettiFall {
+        0% {
+          transform: translateY(-10px) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh) rotate(720deg);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
   </script>
   
   <!-- Fix para garantir funcionamento do menu mobile -->
