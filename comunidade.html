@@ -22,12 +22,12 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="index.html" aria-label="Ir para o início"> 
         <img src="img/logo3.png" alt="Empreender 40+">
       </a>
-      <button class="navbar-toggler" type="button" aria-controls="menu" aria-expanded="false" aria-label="Alternar navegação">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
@@ -390,148 +390,75 @@
     </div>
   </section>
 
-  <!-- Footer Enhanced -->
-  <footer class="footer-enhanced">
-    <!-- Background Elements -->
-    <div class="footer-bg-elements">
-      <div class="footer-wave"></div>
-      <div class="footer-particles">
-        <div class="particle particle-1"></div>
-        <div class="particle particle-2"></div>
-        <div class="particle particle-3"></div>
-        <div class="particle particle-4"></div>
-      </div>
-    </div>
-    
+  <!-- Footer -->
+  <footer class="footer-modern">
     <div class="container">
-      <!-- Main Footer Content -->
       <div class="row py-5">
-        <!-- Brand Section -->
-        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" data-aos="fade-right">
-          <div class="footer-brand-section">
-            <img src="img/logo3.png" alt="Empreender 40+" class="footer-logo mb-4">
-            <h4 class="footer-brand-title">Transformando Experiência em Resultados</h4>
-            <p class="footer-description">
-              A maior comunidade de empreendedores 40+ do Brasil, onde experiência encontra inovação e networking de alto valor impulsiona negócios extraordinários.
-            </p>
-            
-            <div class="footer-social-section">
-              <h6 class="social-title">Conecte-se Conosco</h6>
-              <div class="social-grid">
-                <a href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank" rel="noopener" class="social-btn youtube" aria-label="YouTube">
-                  <i class="bi bi-youtube"></i>
-                  <span>YouTube</span>
-                </a>
-                <a href="https://www.instagram.com/empreender_40mais/" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Instagram">
-                  <i class="bi bi-instagram"></i>
-                  <span>Instagram</span>
-                </a>
-                <a href="https://wa.me/5551991086971" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="WhatsApp">
-                  <i class="bi bi-whatsapp"></i>
-                  <span>WhatsApp</span>
-                </a>
-              </div>
-            </div>
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <img src="img/logo3.png" alt="Empreender 40+" class="footer-logo mb-3">
+          <p class="footer-description">
+            Conectando empreendedores experientes para construir o futuro dos negócios no Brasil.
+          </p>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank" rel="noopener" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
           </div>
         </div>
         
-        <!-- Navigation Links -->
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-          <h5 class="footer-section-title">Navegação</h5>
-          <ul class="footer-nav-links">
-            <li><a href="index.html#inicio"><i class="bi bi-house"></i>Início</a></li>
-            <li><a href="index.html#sobre"><i class="bi bi-info-circle"></i>Sobre</a></li>
-            <li><a href="index.html#palestrantes"><i class="bi bi-mic"></i>Palestrantes</a></li>
-            <li><a href="index.html#local"><i class="bi bi-geo-alt"></i>Local</a></li>
-            <li><a href="index.html#inscricao"><i class="bi bi-calendar-event"></i>Inscreva-se</a></li>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5 class="footer-title">Navegação</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#inicio">Início</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#palestrantes">Palestrantes</a></li>
+            <li><a href="index.html#local">Local</a></li>
           </ul>
         </div>
         
-        <!-- Community Links -->
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
-          <h5 class="footer-section-title">Comunidade</h5>
-          <ul class="footer-nav-links">
-            <li><a href="#vision"><i class="bi bi-eye"></i>Nossa Visão</a></li>
-            <li><a href="#benefits"><i class="bi bi-star"></i>Benefícios</a></li>
-            <li><a href="#cta"><i class="bi bi-rocket"></i>Fazer Parte</a></li>
-            <li><a href="#"><i class="bi bi-chat-dots"></i>Fórum</a></li>
-            <li><a href="#"><i class="bi bi-book"></i>Recursos</a></li>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5 class="footer-title">Comunidade</h5>
+          <ul class="footer-links">
+            <li><a href="#vision">Nossa Visão</a></li>
+            <li><a href="#benefits">Benefícios</a></li>
+            <li><a href="https://www.youtube.com/@CanalEmpreender40Mais" target="_blank">YouTube</a></li>
           </ul>
         </div>
         
-        <!-- Newsletter & Contact -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="300">
-          <div class="footer-newsletter-section">
-            <h5 class="footer-section-title">Mantenha-se Conectado</h5>
-            <p class="newsletter-description">
-              Receba insights exclusivos, convites para eventos especiais e oportunidades de networking que irão acelerar seu crescimento.
-            </p>
-            
-            <div class="newsletter-form-enhanced">
-              <div class="newsletter-benefits">
-                <div class="benefit-item">
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span>Conteúdo Exclusivo</span>
-                </div>
-                <div class="benefit-item">
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span>Acesso Antecipado</span>
-                </div>
-              </div>
-              
-              <form class="newsletter-input-group">
-                <div class="input-wrapper">
-                  <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" required>
-                  <button type="submit" class="newsletter-btn">
-                    <i class="bi bi-arrow-right"></i>
-                    <span>Participar</span>
-                  </button>
-                </div>
-                <div class="newsletter-privacy">
-                  <i class="bi bi-shield-check"></i>
-                  <span>Seus dados estão protegidos. Sem spam.</span>
-                </div>
-              </form>
-            </div>
-            
-            <!-- Contact Info -->
-            <div class="footer-contact-section">
-              <h6 class="contact-title">Contato Direto</h6>
-              <div class="contact-methods">
-                <a href="mailto:contato@empreender40mais.com" class="contact-method">
-                  <i class="bi bi-envelope"></i>
-                  <span>contato@empreender40mais.com</span>
-                </a>
-                <a href="https://wa.me/5551991086971" target="_blank" rel="noopener" class="contact-method">
-                  <i class="bi bi-whatsapp"></i>
-                  <span>(51) 99108-6971</span>
-                </a>
-              </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-title">Mantenha-se Conectado</h5>
+          <p class="footer-newsletter-text">
+            Receba atualizações sobre eventos, conteúdos e oportunidades da comunidade.
+          </p>
+          <div class="newsletter-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Seu melhor e-mail">
+              <button class="btn-newsletter" type="button">
+                <i class="bi bi-arrow-right"></i>
+              </button>
             </div>
           </div>
         </div>
       </div>
       
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-        <div class="footer-divider-enhanced"></div>
-        <div class="row align-items-center py-4">
-          <div class="col-md-6">
-            <p class="footer-copyright">
-              © 2025 <strong>Empreender 40+</strong>. Todos os direitos reservados.
-              <br><small>Transformando experiência em resultados extraordinários.</small>
-            </p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <div class="footer-legal-links">
-              <a href="#" class="legal-link">Política de Privacidade</a>
-              <a href="#" class="legal-link">Termos de Uso</a>
-              <a href="#" class="legal-link">Cookies</a>
-            </div>
-            <div class="footer-credits">
-              <i class="bi bi-heart-fill"></i>
-              Feito com dedicação para empreendedores visionários
-            </div>
+      <hr class="footer-divider">
+      
+      <div class="row py-3">
+        <div class="col-md-6">
+          <p class="footer-copyright">
+            © 2025 Empreender 40+. Todos os direitos reservados.
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="footer-legal">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
           </div>
         </div>
       </div>
@@ -541,6 +468,10 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- JS personalizado da Navbar -->
+  <script src="js/navbar.js"></script>
+  
   <script>
     // Initialize AOS
     AOS.init({
@@ -573,32 +504,6 @@
           });
         }
       });
-    });
-    
-    // Newsletter form handling
-    document.addEventListener('DOMContentLoaded', () => {
-      const newsletterForm = document.querySelector('.newsletter-input-group');
-      if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          const email = this.querySelector('.newsletter-input').value;
-          
-          if (email && email.includes('@')) {
-            // Show success message
-            const btn = this.querySelector('.newsletter-btn');
-            const originalText = btn.innerHTML;
-            
-            btn.innerHTML = '<i class="bi bi-check-circle"></i><span>Obrigado!</span>';
-            btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-            
-            setTimeout(() => {
-              btn.innerHTML = originalText;
-              btn.style.background = '';
-              this.querySelector('.newsletter-input').value = '';
-            }, 3000);
-          }
-        });
-      }
     });
   </script>
 </body>
