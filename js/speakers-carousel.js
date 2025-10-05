@@ -17,8 +17,8 @@ class SpeakersCarousel {
         title: 'Especialista em Inovação'
       },
       {
-        image: 'img/palestrantes/luciano_potter.jpeg',
-        name: 'Luciano Potter',
+        image: 'img/palestrantes/daniel_scola.jpg',
+        name: 'Daniel Scola',
         title: 'Especialista em Comunicação'
       },
       {
