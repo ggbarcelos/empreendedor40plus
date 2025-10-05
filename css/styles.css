@@ -577,6 +577,7 @@ body.navbar-shrunk {
   z-index: 2;
   padding: 80px 40px;
   color: white;
+  overflow-wrap: break-word;
 }
 
 .event-badge {
@@ -790,6 +791,9 @@ body.navbar-shrunk {
   margin-top: 20px;
   line-height: 1.4;
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* GRID DE INFORMAÇÕES */
@@ -1430,6 +1434,7 @@ body.navbar-shrunk {
   .hero-main-content {
     padding: 60px 20px 40px;
     text-align: center;
+    overflow-wrap: break-word;
   }
   
   .event-badge {
@@ -1462,7 +1467,11 @@ body.navbar-shrunk {
     font-size: 1rem;
     display: block;
     margin-top: 15px;
-    line-height: 1.4;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    padding: 0 10px;
   }
   
   .event-info-grid {
@@ -1515,6 +1524,7 @@ body.navbar-shrunk {
 @media (max-width: 480px) {
   .hero-main-content {
     padding: 50px 15px 30px;
+    overflow-wrap: break-word;
   }
   
   .title-main { 
@@ -1531,7 +1541,12 @@ body.navbar-shrunk {
   }
   
   .title-subtitle { 
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    padding: 0 5px;
+    line-height: 1.5;
   }
   
   .event-info-grid {
